@@ -1,1 +1,31 @@
-**/Estilos css/**
+html {}
+body {
+    font-family: 'Crimson Text', serif;
+}
+
+/*Header*/
+.header.inicio{
+    background: blueviolet;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    min-height: 60rem;
+}
+.navegador{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.6rem;
+}
+/*Menu de Nagegacion*/
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+.menu a:last-of-type{
+    margin-right: 0;
+}
+.menu a:hover{
+    color: greenyellow;
+}
