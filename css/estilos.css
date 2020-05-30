@@ -1,31 +1,43 @@
-html {}
+html {
+    font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
+}
 body {
     font-family: 'Crimson Text', serif;
 }
-
+/*Globales*/
+.contenedor{
+    margin: 0 auto 0 auto;
+    display: flex;
+    max-width: 120rem;
+}
+#logo{
+    margin-right: 30rem;
+}
 /*Header*/
 .header.inicio{
-    background: blueviolet;
+    background-image: url(https://66.media.tumblr.com/2ba60917fbd6dfc5cb21dd048d6f74c7/tumblr_pdvsssDRTn1w2ad4p_1280.gif);
     background-position: center center;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     min-height: 60rem;
 }
-.navegador{
+/*Menu de Nagegacion*/
+.menu{
     display: flex;
     justify-content: space-between;
-    padding-top: 1.6rem;
+    align-items: center;
+    padding-top: 3rem;
 }
-/*Menu de Nagegacion*/
-.menu a{
+.navegacion a{
     color: white;
     text-decoration: none;
     font-size: 1.8rem;
     margin-right: 2rem;
 }
-.menu a:last-of-type{
+.navegacion a:last-of-type{
     margin-right: 0;
+    margin-left: 10rem;
 }
-.menu a:hover{
+.navegacion a:hover{
     color: greenyellow;
 }
