@@ -6,7 +6,7 @@ html {
     font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
 }
 body {
-    background-color: #0e121c;
+    background-image: url(https://images7.alphacoders.com/343/343836.jpg);
     font-family: 'Crimson Text', serif;
     color: white;
     background-size: 100% 100%;
@@ -32,6 +32,7 @@ img{
     display: flex;
     max-width: 100%;
     background-color:rgba(0, 0, 0, 0.950);
+    border-bottom: 0.2rem solid gray;
 }
 .contenedor{
     max-width: 120rem;
@@ -59,7 +60,7 @@ img{
     margin-bottom: 20rem;
     padding-bottom: 2rem;
     border: 0.1rem solid white;
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color:rgba(136, 122, 122, 0.150);
     text-shadow: white;
 }
 .slogan h1{
@@ -112,6 +113,9 @@ img{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+#seccion-titulo{
+    font-size: 3rem;
+}
 .FW-300{
     font-weight: 300;
 }
@@ -131,6 +135,10 @@ img{
     display: inline-block;
     text-align: center;
 }
+.boton-derecha{
+    display: flex;
+    justify-content: flex-end;
+}
 .boton-azul{
     background-color: rgb(1, 103, 236);
 }
@@ -144,13 +152,18 @@ img{
     background-color: rgb(1, 103, 236);
     color:white;
 }
-.anuncio{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding-bottom: 2rem;
+.boton-verde{
+    background-color: lawngreen;
+}
+.boton-verde:hover{
+    background-color:white;
+    color:  lawngreen;
+    box-shadow: 0 0.4rem 1.6rem lawngreen;
+    transition: all 0.2s ease;
+}
+.boton-verde:active{
+    background-color: lawngreen;
+    color:white;
 }
 /*Iconos Main*/
 
@@ -162,8 +175,8 @@ img{
     flex-basis:  calc(33.3% - 1rem);
     text-align: center;
     line-height: 2rem;
-    background-color:rgba(247, 2, 55, 0.100);
-    border: 0.3rem double rgb(247, 2, 55);
+    background-color:rgba(0, 0, 0, 1);
+    border: 0.3rem double #00aeff;
 }
 .icono h3{
     text-transform: uppercase;
@@ -177,12 +190,13 @@ img{
 .plan{
     flex-basis: calc(33.3% - 1rem);
     border-style: double;
-    border-color: rgb(247, 2, 55);
+    border-color: #00aeff;;
     border-width: 0.3rem;
-    background-color:rgba(247, 2, 55, 0.100);
+    background-color:rgba(0, 0, 0, 1);
     /*border: 0.3rem double lightseagreen;*/
 }
 .contenido-plan{
+    text-align: center;
     padding: 2rem;
 }
 .contenido-plan h3, .contenido-plan p{
@@ -191,6 +205,29 @@ img{
 .precio{
     color: rgba(15, 231, 15, 0.699);
     font-weight: 700;
+    font-size: 1.6rem;
+}
+/* PC GAMER*/
+.anuncio{
+    background-image: url(https://i.blogs.es/f7573b/razer/1366_2000.jpeg);
+    background-size: cover;
+    background-position: center center;
+    height: 36rem;
+    display: flex;
+    align-items: center;
+}
+.contenido-gamer{
+    flex:1;
+    font-size: 5rem;
+    color:lawngreen;
+}
+.contenido-gamer h2{
+    background-color: rgba(136, 122, 122, 0.150);
+    border: 0.3rem double lawngreen;
+    max-width: 90rem;
+}
+.contenido-gamer p{
+    font-size: 1.8rem;
 }
 /*registros*/
 .form-register {
@@ -249,3 +286,72 @@ img{
     font-size: 16px;
   }
   
+/*Seccion inferior*/
+.seccion-inferior{
+    display: flex;
+    font-size: 1.2rem;
+}
+.seccion-inferior h3{
+    font-size: 2rem;
+}
+.seccion-inferior .blog{
+    flex-basis: 60%;
+}
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+}
+.articulo-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.articulo-blog:last-of-type{
+    margin-bottom: 0;
+}
+.articulo-blog .imagen{
+    flex-basis: 40%;
+}
+.articulo-blog .texto-blog{
+    flex-basis: calc(60% - 3rem);
+}
+.texto-blog h4{
+    margin: 0;
+    font-size: 1.3rem;
+}
+.texto-blog h4::after{
+    content: "";
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #1f53c5;
+    margin-top: 1rem;
+}
+.texto-blog h5{
+    color: orange;
+    margin: 0;
+}
+/*Testimoniales*/
+.testimoniales .testimonial{
+    background-color: #1f53c5;
+    font-size: 1.4rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.testimoniales{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer{
+    background-color: rgba(0, 0, 0, 0.950);
+    margin: 0;
+}
+.contenedor-footer{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.copy{
+    margin: 0;
+    font-size: 1.2rem;
+}
