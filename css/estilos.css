@@ -39,6 +39,12 @@ body {
     font-size: 5rem;
 }
 .slogan h2{
+    max-width: 100rem;
+    margin-left: 15rem;
+    text-align: center;
+    font-size: 2rem;
+}
+.slogan h3{
     padding-bottom: 25rem;
     max-width: 100rem;
     margin-left: 15rem;
