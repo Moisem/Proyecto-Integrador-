@@ -71,12 +71,6 @@ img{
 }
 
 /*Header*/
-/*https://giffiles.alphacoders.com/202/202291.gif
-https://notemascomic.files.wordpress.com/2017/09/fondo-tecnologia-gif.gif
-https://i.pinimg.com/originals/20/2c/68/202c68747246679748e92003f3e6da13.gif
-https://magazine.femepa.org/wp-content/uploads/sites/2/2014/05/tecnologia.gif.png
-https://thumbs.gfycat.com/EarlyFavoriteCranefly-size_restricted.gif
-https://i1.wp.com/windowscustomization.com/wp-content/uploads/2019/04/MSI.gif?fit=768%2C432&quality=80&strip=all&ssl=1&w=640*/
 .header.inicio{
     background-image: url(https://magazine.femepa.org/wp-content/uploads/sites/2/2014/05/tecnologia.gif.png);
     background-position: center center;
@@ -149,9 +143,13 @@ https://i1.wp.com/windowscustomization.com/wp-content/uploads/2019/04/MSI.gif?fi
     background-color: rgb(1, 103, 236);
     color:white;
 }
-.boton-derecha{
+.anuncio{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 2rem;
 }
 /*Iconos Main*/
 
