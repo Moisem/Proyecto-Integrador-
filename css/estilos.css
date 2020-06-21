@@ -6,6 +6,7 @@ html {
     font-size: 62.5%; /** Reset para REMS - 62.5% = 10px de 16px **/
 }
 body {
+    background-color: #0e121c;
     font-family: 'Crimson Text', serif;
     color: white;
     background-size: 100% 100%;
@@ -72,7 +73,7 @@ img{
 
 /*Header*/
 .header.inicio{
-    background-image: url(https://magazine.femepa.org/wp-content/uploads/sites/2/2014/05/tecnologia.gif.png);
+    background-image: url(https://i.ibb.co/FzLF625/v90.png);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -100,8 +101,8 @@ img{
     margin-left: 10rem;
 }
 .navegacion a:hover{
-    color: lightseagreen;
-    text-shadow: 0 0.4rem 1.6rem rgba(49, 138, 172, 1);
+    color: rgb(6, 133, 252);
+    text-shadow: 0 0.4rem 1.6rem rgb(6, 133, 252);
     transition: all 0.2s ease;
 }
 
