@@ -3,30 +3,70 @@ html {
 }
 body {
     font-family: 'Crimson Text', serif;
+    color: white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
 }
 /*Globales*/
-.contenedor{
-    margin: 0 auto 0 auto;
+.contenedor.header{
+    margin: 0 0 0 0;
     display: flex;
-    max-width: 120rem;
+    max-width: 100%;
+    background-color:black;
+    opacity: 70%;
 }
 #logo{
     margin-right: 30rem;
 }
+#logo img{
+    height: 5rem;
+}
+.contenido-header{
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.slogan h1{
+    padding-top: 14rem;
+    max-width: 100rem;
+    margin-left: 15rem;
+    text-align: center;
+    font-size: 5rem;
+}
+.slogan h2{
+    padding-bottom: 25rem;
+    max-width: 100rem;
+    margin-left: 15rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
 /*Header*/
+/*https://giffiles.alphacoders.com/202/202291.gif
+https://notemascomic.files.wordpress.com/2017/09/fondo-tecnologia-gif.gif
+https://i.pinimg.com/originals/20/2c/68/202c68747246679748e92003f3e6da13.gif
+https://magazine.femepa.org/wp-content/uploads/sites/2/2014/05/tecnologia.gif.png*/
 .header.inicio{
-    background-image: url(https://66.media.tumblr.com/2ba60917fbd6dfc5cb21dd048d6f74c7/tumblr_pdvsssDRTn1w2ad4p_1280.gif);
+    background-image: url(https://magazine.femepa.org/wp-content/uploads/sites/2/2014/05/tecnologia.gif.png);
     background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     min-height: 60rem;
 }
+
 /*Menu de Nagegacion*/
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .navegacion a{
     color: white;
@@ -39,5 +79,5 @@ body {
     margin-left: 10rem;
 }
 .navegacion a:hover{
-    color: greenyellow;
+    color: lightseagreen;
 }
