@@ -19,6 +19,10 @@ img{
     max-width: 100%;
 }
 /*Globales*/
+.titulo{
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+}
 .fondo-body{
     background-color: #000;
     background-position: center center;
@@ -66,10 +70,11 @@ img{
 .slogan h1{
     text-align: center;
     font-size: 5rem;
+    font-family: 'Anton', sans-serif;
 }
 .slogan h2{
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 /*Header*/
@@ -115,6 +120,7 @@ img{
 }
 #seccion-titulo{
     font-size: 3rem;
+    font-family: 'Anton', sans-serif;
 }
 .FW-300{
     font-weight: 300;
@@ -190,7 +196,7 @@ img{
 .plan{
     flex-basis: calc(33.3% - 1rem);
     border-style: double;
-    border-color: #00aeff;;
+    border-color: #00aeff;
     border-width: 0.3rem;
     background-color:rgba(0, 0, 0, 1);
     /*border: 0.3rem double lightseagreen;*/
@@ -201,11 +207,13 @@ img{
 }
 .contenido-plan h3, .contenido-plan p{
     margin: 0;
+    margin-bottom: 1rem;
 }
 .precio{
-    color: rgba(15, 231, 15, 0.699);
+    color: white;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 2rem;
+    background-color:#00aeff;
 }
 /* PC GAMER*/
 .anuncio{
@@ -215,6 +223,7 @@ img{
     height: 36rem;
     display: flex;
     align-items: center;
+    padding-bottom: 5rem;
 }
 .contenido-gamer{
     flex:1;
@@ -224,68 +233,11 @@ img{
 .contenido-gamer h2{
     background-color: rgba(136, 122, 122, 0.150);
     border: 0.3rem double lawngreen;
-    max-width: 90rem;
+    max-width: 100rem;
 }
 .contenido-gamer p{
     font-size: 1.8rem;
-}
-/*registros*/
-.form-register {
-    width: 400px;
-    background: #24303c;
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-  }
-
-  .form-register h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  
-  .controls {
-    width: 100%;
-    background: #24303c;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: white;
-  }
-  
-  .form-register p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
-  }
-  
-  .form-register a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .form-register a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-  
-  .form-register .botons {
-    width: 100%;
-    background: #1f53c5;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-  }
-  
+}  
 /*Seccion inferior*/
 .seccion-inferior{
     display: flex;
@@ -332,15 +284,18 @@ img{
 }
 /*Testimoniales*/
 .testimoniales .testimonial{
-    background-color: #1f53c5;
+    background-color: #1f54c56c;
     font-size: 1.4rem;
     padding: 2rem;
-    border-radius: 2rem;
+    border-radius: 3rem;
+    margin: 2rem;
+    border: 0.1rem double #00aeff;
 }
 .testimoniales{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 4rem;
 }
 .footer{
     background-color: rgba(0, 0, 0, 0.950);
