@@ -3,32 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+     <link rel="stylesheet" href="css/iconos.css">
+    <link rel="stylesheet" href="css/normalice.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
     <title>Abysmal Edge</title>
 </head>
-<body>
-   
+<body class="fondo-body">
+  <div class="contenedor-header">
+    <div class="menu">
+        <div id="logo">
+            <a href="index.html">
+                <img src="img/Logo.png"Logotipo">
+            </a>
+        </div>
+        <nav class="navegacion">
+            <a href="#">Renta</a>
+            <a href="#">Venta</a>
+            <a href="#">Componentes</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+            <a href="#" class="icon-user">Area de Clientes</a>
+        </nav>
+    </div>
+</div>
+    <div class="form-check form-check-inline">
     <label for="Tipo de cuenta">Tipo de cuenta</label>
     <select name="Tipo de cuenta" id="Tipo de cuenta">
         <option value="">Seleccion</option>
         </select><br>
+    </div>
 
         <h3>Registro Empresarial</h3>
+        <div class="form-check form-check-inline">
         <label for="rfc">RFC</label>
         <input id="rfc" type="text" name="rfc"><br>
+        </div>
+        <div class="form-check form-check-inline">
         <label for="correo">Correo</label>
         <input type="email" id="correo" name="correo"><br>
+         </div>
+         <div class="form-check form-check-inline">
         <label for="contraseña">Contraseña</label>
         <input type="text" id="contraseña" name="contraseña"><br>
+         </div>
+        <div class="form-check form-check-inline">
         <label for="Confirmar contraseña">Confirmar contraseña</label>
         <input type="text" id="confirmar contraceña" name="confirmar contraceña"><br>
+        </div>
+        <div class="form-check form-check-inline">
         <label for="nombre completo del contacto">Nombre completo del contacto</label>
         <input type="nombre" id="nombre completo de contacto" name="nombre completo de contacto"><br>
+        </div>
+        <div class="form-check form-check-inline">
         <label for="numero">Numero</label>
         <input type="number" id="numero" name="numero"><br>
+        </div>
+        <div class="form-check form-check-inline">
         <label for="numero de contacto">Numero de contacto</label>
         <input type="number" id="numero de contacto" name="numero de contacto"><br>
+        </div>
 
-         <h3>Dirección de Envío</h3>  
+         <h3>Dirección de Envío</h3>
+         <div class="form-check form-check-inline">
          <label for="estado">Estado</label>
             <select name="estado" id="estado">
              <option value="">Seleccion</option>
@@ -36,6 +74,8 @@
              <option value="cdmx">CDMX</option>
              <option value="veracruz">Veracruz</option>
             </select><br>
+            </div>
+            <div class="form-check form-check-inline">
             <label for="municipio">Municipio</label>
             <select name="municipio" id="municipio">
              <option value="">Seleccion</option>
@@ -43,14 +83,23 @@
              <option value="azcapotzalco">azcapotzalco</option>
              <option value="acula">Acula</option>
             </select><br>
+            </div>
+            <div class="form-check form-check-inline">
             <label for="calle">Calle</label>
             <input type="calle" id="calle" name="Calle"><br>
+            </div>
+            <div class="form-check form-check-inline">
             <label for="no.Int">No. Int</label>
              <input type="no.Int" id="no.Int" name="no.Int"><br>
+            </div>
+            <div class="form-check form-check-inline"></div>
              <label for="no.Ext">no.Ext</label>
-            <input type="no.Ext" id="no.Ext" name="no.Ext"><br>
+             <input type="no.Ext" id="no.Ext" name="no.Ext"><br>
+             </div>
+             <div class="form-check form-check-inline">
             <label for="codigo postal">Codigo postal</label>
             <input type="number" id="codigo postal" name="codigo postal"><br>
-
+            </div>
+        
 </body>
 </html>
