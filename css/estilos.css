@@ -100,18 +100,17 @@ img{
     color: white;
     text-decoration: none;
     font-size: 1.8rem;
-    margin-right: 2rem;
-}
-.navegacion a:last-of-type{
-    margin-right: 0;
-    margin-left: 10rem;
+    margin-right: 1.6rem;
 }
 .navegacion a:hover{
     color: rgb(6, 133, 252);
     text-shadow: 0 0.4rem 1.6rem rgb(6, 133, 252);
     transition: all 0.2s ease;
 }
-
+.navegacion-usuario{
+    margin-left: 20rem;
+    margin-right: 0;
+}
 /*secciones*/
 
 .seccion{
@@ -138,6 +137,16 @@ img{
     font-size: 1.8rem;
     padding: 0.5rem 1.5rem;
     margin-top: 1.5rem;
+    display: inline-block;
+    text-align: center;
+}
+.boton-registrate{
+    color: white;
+    background-color: #00aeff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 0.5rem 1.5rem;d
     display: inline-block;
     text-align: center;
 }
