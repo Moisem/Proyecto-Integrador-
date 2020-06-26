@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/iconos.css">
+    <link rel="stylesheet" href="css/normalice.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <title>Abysmal Edge | Registro</title>
+</head>
+<body class="fondo-body">
+  <div class="contenedor-header">
+    <div class="menu">
+        <div id="logo">
+            <a href="index.html">
+                <img src="img/Logo.png"Logotipo">
+            </a>
+        </div>
+        <nav class="navegacion">
+            <a href="Planes.html">Planes</a>
+            <a href="Equipos.html">Equipos</a>
+            <a href="Gaming.html">Gaming</a>
+            <a href="Ayuda.html">Ayuda</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </div>
+</div>
+
+<main class="contenedor">
+
+<form action="">
+    <h2 class="FW-900 centrar-texto">Crea una Nueva Cuenta en Abysmal Edge</h2>
+        <fieldset>
+            <legend>Datos de Usuario</legend>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" placeholder="Nombre" required>
+
+            <label for="correo">Correo</label>   
+            <input type="email" id="correo" placeholder="ejemplo@dominio.com" required>
+
+            <label for="contrasena">Contraseña</label>
+            <input type="password" placeholder="6-16 Caracteres" id="contrasena">
+
+            <label for="ConfirmarContrasena">Confirmar Contraseña</label>
+            <input type="password" id="ConfirmarContrasena" placeholder="Confirma tu Contraseña">
+
+            <label for="Numero">Numero Telefonico</label>
+            <input type="tel" id="Numero" placeholder="+52" required>
+        </fieldset>
+
+        <fieldset class="direccion">
+        <legend>Direcciones de Envio</legend>
+
+            <label for="estado">Estado</label>
+            <select id="estado">
+                <option value="" disabled selected>Elegir Opcion</option>
+                <option value="mexico">Mexico</option>
+                <option value="cdmx">CDMX</option>
+                <option value="veracruz">Veracruz</option>
+            </select>
+            
+            <label for="municipio">Municipio</label>
+            <select name="municipio" id="municipio">
+                <option value="" disabled selected>Elegir Opcion</option>
+                <option value="lerma">Lerma</option>
+                <option value="azcapotzalco">azcapotzalco</option>
+                <option value="acula">Acula</option>
+            </select>
+           
+            <label for="calle">Calle</label>
+            <input type="text" id="calle" placeholder="Ingrese su calle">
+            
+            <label for="no.Int">No. Interior</label>
+            <input type="text" id="no.Int" placeholder="Ingrese su no.Int">
+           
+            <label for="no.Ext">No. Exterior</label>
+            <input type="text" id="no.Ext" placeholder="Ingrese su no.Exte">
+            
+            <label for="codigo postal">Codigo Postal</label>
+            <input type="text" id="codigo postal" placeholder="Ingrese su Nombre">
+
+            <div class="agregar-direccion contenedor">
+            <input type="submit"  value="+" class="boton boton-azul-cielo">
+            </div>
+
+        </fieldset>
+
+    <div class="contendor centrar-texto iniciar_sesion">
+        <input type="submit"  value="Crear Cuenta" class="boton boton-azul-cielo">
+        <p>¿Ya tienes una cuenta? <a href="Inicio_Sesion.html" class="IS">Inicia Sesión</a></p>
+    </div>
+</form>
+</main>
+</body>
+</html>

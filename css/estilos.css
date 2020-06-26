@@ -24,7 +24,7 @@ img{
     font-family: 'Anton', sans-serif;
 }
 .fondo-body{
-    background-color: #000;
+    background-image: url(https://hardzone.es/app/uploads-hardzone.es/2018/06/Xiaomi-Mi-Gaming-Mouse-01-1-800x419.jpg?fbclid=IwAR29WWc-qw_EYRWo48vPNcV1o_Q4b_04wRWWrN5GB6KSACUq1iNNnCwvT-4);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -124,6 +124,9 @@ img{
 .FW-300{
     font-weight: 300;
 }
+.FW-900{
+    font-weight: 900;
+}
 .Dblock{
     display: block!important;
 }
@@ -178,6 +181,19 @@ img{
 }
 .boton-verde:active{
     background-color: lawngreen;
+    color:white;
+}
+.boton-azul-cielo{
+    background-color: #00aeff;
+}
+.boton-azul-cielo:hover{
+    background-color:white;
+    color:  #00aeff;
+    box-shadow: 0 0.4rem 1.6rem white;
+    transition: all 0.2s ease;
+}
+.boton-azul-cielo:active{
+    background-color: #00aeff;
     color:white;
 }
 /*Iconos Main*/
@@ -293,7 +309,7 @@ img{
 }
 /*Testimoniales*/
 .testimoniales .testimonial{
-    background-color: #1f54c56c;
+    background-color: #24303c93;
     font-size: 1.4rem;
     padding: 2rem;
     border-radius: 3rem;
@@ -319,3 +335,79 @@ img{
     margin: 0;
     font-size: 1.2rem;
 }
+
+/*Formularios*/
+form{
+    border-radius: 0.4rem;
+    background-color: #0d2a689a;
+    padding-top: 0.015rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.5rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    width: 50%;
+    font-size: 1.6rem;
+}
+label{
+    display: block;
+}
+input:not([type="submit"]){
+    width: 100%;
+    background: #123961;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1.6rem;
+    border: 0.1rem solid #1f53c5;
+    font-size: 1.8rem;
+    color: white;
+}
+input[type="submit"]
+{
+    Border: none;
+}
+option, select{
+    width: 100%;
+    background: #123961;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1.6rem;
+    border: 0.1rem solid #1f53c5;
+    font-size: 1.8rem;
+    color: white;
+}
+fieldset{
+    background-color: rgba(65, 105, 225, 0.548);
+    border-radius: 1rem;
+    border: none;
+    border-style: solid;
+    border: 1rem;
+    border-color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.agregar-direccion{
+    display: flex;
+    justify-content: flex-end;
+}
+legend{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.iniciar_sesion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.IS{
+    text-decoration: none;
+    color: #00aeff;
+}
+::-webkit-input-placeholder {
+     color: rgba(255, 255, 255, 0.637); 
+    } 
