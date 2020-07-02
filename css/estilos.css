@@ -196,6 +196,19 @@ img{
     background-color: #00aeff;
     color:white;
 }
+.boton-rojo{
+    background-color: rgb(236, 1, 1);
+}
+.boton-rojo:hover{
+    background-color:white;
+    color:   rgb(236, 1, 1);
+    box-shadow: 0 0.4rem 1.6rem white;
+    transition: all 0.2s ease;
+}
+.boton-rojo:active{
+    background-color:  rgb(236, 1, 1);
+    color:white;
+}
 /*Iconos Main*/
 
 .iconos{
@@ -239,6 +252,33 @@ img{
     font-weight: 700;
     font-size: 2rem;
     background-color:#00aeff;
+}
+.plan-hogar{
+    flex-basis: calc(33.3% - 5rem);
+    border-style: double;
+    border-color: #00aeff;
+    border-width: 0.3rem;
+    background-color:rgba(0, 0, 0, 1);
+    height: 50rem;
+    /*border: 0.3rem double lightseagreen;*/
+}
+.plan-gaming{
+    flex-basis: calc(33.3% - 5rem);
+    border-style: double;
+    border-color: #00aeff;
+    border-width: 0.3rem;
+    background-color:rgba(0, 0, 0, 1);
+    height: 50rem;
+    /*border: 0.3rem double lightseagreen;*/
+}
+.plan-empresarial{
+    flex-basis: calc(33.3% - 5rem);
+    border-style: double;
+    border-color: #00aeff;
+    border-width: 0.3rem;
+    background-color:rgba(0, 0, 0, 1);
+    height: 50rem;
+    /*border: 0.3rem double lightseagreen;*/
 }
 /* PC GAMER*/
 .anuncio{
@@ -411,3 +451,11 @@ legend{
 ::-webkit-input-placeholder {
      color: rgba(255, 255, 255, 0.637); 
     } 
+textarea{
+    resize: none;
+    background-color: #123961;
+    width: 100%;
+    color: white;
+    display: block;
+    height: 20rem;
+}

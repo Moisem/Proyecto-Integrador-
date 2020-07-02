@@ -28,30 +28,26 @@
     </div>
 </div>
 <form action="">
-    <h2 class="FW-900 centrar-texto">Contratar plan</h2>
         <fieldset>
-            <legend>Plan Empresarial</legend>
-            <label for="no_servicios">Numero de equipos para rentar</label>
-            <input id="no_servicios" type="number" min="1" required>
+            <legend>Contratación de Plan</legend>
+            <label for="no_servicios">Numero de Servicios</label>
+            <input id="no_servicios" type="number" min="1" value="1" required>
 
             <label for="fecha_de_requisicion">Fecha de requisicion</label>   
             <input id="fecha_inicio" type="date" name="fecha">
 
-            <label for="fecha_de_requisicion">Fecha de vencimiento de servicio</label>   
+            <label for="fecha_de_requisicion">Tu Servicio vencerá el dia:</label>   
             <input id="decha_final" type="date" name="fecha">
 
-            <label for="direccion">Domicilio de netrega</label>
-            <input id="direccion_entrega" type="text" name="direccion">
-
-            <label for="persona_que_recibe">Persona Autorizada para recibir el Equipo</label>
-            <input id="persona_que_recibe" type="text" name="nombre">
+            <label for="persona_que_recibe">Nombre de quien recibirá el equipo</label>
+            <input id="persona_que_recibe" type="text" name="nombre" placeholder="Nombre Completo">
 
             <label for="referencias">Indicaciones Personales</label>
-            <input type="text" placeholder="Referencias" required>
+            <textarea name="Comentarios" id="Comentarios"></textarea>
         </fieldset>
         <div class="contendor centrar-texto iniciar_sesion">
             <input type="submit" value="Contratar" class="boton boton-azul-cielo">
-            <p>¿Quieres escoger otro plan? <a href="Planes.html" class="IS">Otro plan</a></p> 
+            <a href="Planes.html" class="boton boton-rojo">Cancelar</a>
         </div>
 </form>
 </main>
