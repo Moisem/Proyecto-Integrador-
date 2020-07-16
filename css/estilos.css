@@ -75,6 +75,7 @@ img{
 .slogan h2{
     text-align: center;
     font-size: 2rem;
+    color: #00aeff;
 }
 
 /*Header*/
@@ -153,6 +154,14 @@ img{
     display: inline-block;
     text-align: center;
 }
+.boton-registrate:hover{
+    background-color: white;
+    color: #00aeff;
+}
+.boton-registrate:active{
+    color: white;
+    background-color: #00aeff;
+}
 .boton-derecha{
     display: flex;
     justify-content: flex-end;
@@ -171,16 +180,16 @@ img{
     color:white;
 }
 .boton-verde{
-    background-color: lawngreen;
+    background-color: rgb(2, 150, 2);
 }
 .boton-verde:hover{
     background-color:white;
-    color:  lawngreen;
-    box-shadow: 0 0.4rem 1.6rem lawngreen;
+    color:  rgb(2, 150, 2);
+    box-shadow: 0 0.4rem 1.6rem rgb(2, 150, 2);
     transition: all 0.2s ease;
 }
 .boton-verde:active{
-    background-color: lawngreen;
+    background-color: rgb(2, 150, 2);
     color:white;
 }
 .boton-azul-cielo{
@@ -207,6 +216,19 @@ img{
 }
 .boton-rojo:active{
     background-color:  rgb(236, 1, 1);
+    color:white;
+}
+.boton-dorado{
+    background-color: rgb(206, 176, 6);
+}
+.boton-dorado:hover{
+    background-color:white;
+    color:  rgb(206, 176, 6);
+    box-shadow: 0 0.4rem 1.6rem (206, 176, 6);
+    transition: all 0.2s ease;
+}
+.boton-dorado:active{
+    background-color: (206, 176, 6);
     color:white;
 }
 /*Iconos Main*/
@@ -243,6 +265,10 @@ img{
     text-align: center;
     padding: 2rem;
 }
+.plan-hogar h2, .plan-gaming h2, .plan-empresarial h2{
+    font-size: 2rem;
+    font-weight: 900;
+}
 .contenido-plan h3, .contenido-plan p{
     margin: 0;
     margin-bottom: 1rem;
@@ -253,32 +279,71 @@ img{
     font-size: 2rem;
     background-color:#00aeff;
 }
+.precio-verde{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color:rgb(2, 150, 2);
+}
+.precio-dorado{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color:rgb(206, 176, 6);
+}
 .plan-hogar{
     flex-basis: calc(33.3% - 5rem);
     border-style: double;
     border-color: #00aeff;
     border-width: 0.3rem;
     background-color:rgba(0, 0, 0, 1);
-    height: 50rem;
+    height: 55rem;
     /*border: 0.3rem double lightseagreen;*/
+}
+.plan-hogar p{
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 900;
 }
 .plan-gaming{
     flex-basis: calc(33.3% - 5rem);
     border-style: double;
-    border-color: #00aeff;
+    border-color: rgba(20, 230, 66, 0.500);
     border-width: 0.3rem;
-    background-color:rgba(0, 0, 0, 1);
-    height: 50rem;
+    background-color:rgba(20, 230, 66, 0.200);
+    height: 55rem;
     /*border: 0.3rem double lightseagreen;*/
+}
+.plan-gaming p{
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 900;
 }
 .plan-empresarial{
     flex-basis: calc(33.3% - 5rem);
     border-style: double;
-    border-color: #00aeff;
+    border-color: rgba(240, 204, 3, 0.500);
     border-width: 0.3rem;
-    background-color:rgba(0, 0, 0, 1);
-    height: 50rem;
+    background-color:rgba(240, 204, 3, 0.200);
+    height: 55rem;
     /*border: 0.3rem double lightseagreen;*/
+}
+.plan-empresarial p{
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 900;
+}
+.descripcion-plan{
+    border: 0.3rem double #00aeff;
+    padding: 1rem;
+}
+.descripcion-plan-gaming{
+    border: 0.3rem double rgba(20, 230, 66, 0.500);
+    padding: 1rem;
+}
+.descripcion-plan-empresarial{
+    border: 0.3rem double rgba(240, 204, 3, 0.500);
+    padding: 1rem;
 }
 /* PC GAMER*/
 .anuncio{

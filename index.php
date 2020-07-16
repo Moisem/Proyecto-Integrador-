@@ -1,7 +1,7 @@
 <?php include_once "includes/templates/header.php";?>
         <div class="slogan">
             <h1>Renta tu Primer Equipo de Cómputo</h1>
-            <h2>Nuestra empresa cuenta con mas de 50 variedades de equipos de computo a partir de $200/mes para todo tipo de situaciones</h2>
+            <h2>Planes y Equipos a partir de 200 MXN/mes</h2>
             <div>
             <a href="" class="boton boton-azul">Renta Ahora</a>
             </div>
@@ -18,7 +18,7 @@
                     <h2>Equipo 1</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa nulla doloribus ipsam distinctio reprehenderit earum necessitatibus cum, iste minima nesciunt blanditiis, eius reiciendis ad voluptates quo iure repudiandae repellendus?</p>
                     <p class="precio">Desde $350/mes</p>
-                    <a href="#" class="boton boton-azul Dblock">Ir a Planes</a>
+                    <a href="#" class="boton boton-azul Dblock">Ir a Equipos</a>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                     <h2>Equipo 2</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa nulla doloribus ipsam distinctio reprehenderit earum necessitatibus cum, iste minima nesciunt blanditiis, eius reiciendis ad voluptates quo iure repudiandae repellendus?</p>
                     <p class="precio">Desde $6,000</p>
-                    <a href="#" class="boton boton-azul Dblock">Ir a Planes</a>
+                    <a href="#" class="boton boton-azul Dblock">Ir a Equipos</a>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@
                     <h2>Equipo 3</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa nulla doloribus ipsam distinctio reprehenderit earum necessitatibus cum, iste minima nesciunt blanditiis, eius reiciendis ad voluptates quo iure repudiandae repellendus?</p>
                     <p class="precio">Desde $200/mes</p>
-                    <a href="#" class="boton boton-azul Dblock">Ir a Planes</a>
+                    <a href="#" class="boton boton-azul Dblock">Ir a Equipos</a>
                 </div>
             </div>
         </div>
