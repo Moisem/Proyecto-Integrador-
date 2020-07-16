@@ -1,41 +1,22 @@
-<!DOCTYPE html>
-<html lang="es-MX">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/iconos.css">
-    <link rel="stylesheet" href="css/normalice.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
-    <title>Abysmal Edge | Registro</title>
-</head>
-<body class="fondo-body">
-  <div class="contenedor-header">
-    <div class="menu">
-        <div id="logo">
-            <a href="index.html">
-                <img src="img/Logo.png"Logotipo">
-            </a>
-        </div>
-        <nav class="navegacion">
-            <a href="Planes.html">Planes</a>
-            <a href="Equipos.html">Equipos</a>
-            <a href="Gaming.html">Gaming</a>
-            <a href="Ayuda.html">Ayuda</a>
-            <a href="Contacto.html">Contacto</a>
-        </nav>
-    </div>
-</div>
+<?php include_once "includes/templates/header_secundario.php";?>
 
 <main class="contenedor">
 
-<form action="">
+<form action="Registro_Exitoso.html" method="post">
     <h2 class="FW-900 centrar-texto">Crea una Nueva Cuenta en Abysmal Edge</h2>
         <fieldset>
             <legend>Datos de Usuario</legend>
-            <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" placeholder="Nombre" required>
+
+            <div class="datos_personales">
+                <label for="nombre">Nombre(s)</label>
+                <label for="nombre">Primer Apellido</label>
+                <label for="nombre">Segundo Apellido</label>
+            </div>
+            <div class="datos_personales">
+                <input id="nombre" type="text" placeholder="Francisco" required>
+                <input id="ap_paterno" type="text" placeholder="Garcia" required>
+                <input id="ap_materno" type="text" placeholder="Juarez" required>
+            </div>
 
             <label for="correo">Correo</label>   
             <input type="email" id="correo" placeholder="ejemplo@dominio.com" required>
@@ -89,7 +70,7 @@
 
     <div class="contendor centrar-texto iniciar_sesion">
         <input type="submit"  value="Crear Cuenta" class="boton boton-azul-cielo">
-        <p>¿Ya tienes una cuenta? <a href="Inicio_Sesion.html" class="IS">Inicia Sesión</a></p>
+        <p>¿Ya tienes una cuenta? <a href="Inicio_Sesion.php" class="IS">Inicia Sesión</a></p>
     </div>
 </form>
 </main>

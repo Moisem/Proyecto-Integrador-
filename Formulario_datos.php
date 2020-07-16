@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/iconos.css">
-    <link rel="stylesheet" href="css/normalice.css">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <title>Abysmal Edge</title>
-</head>
-<body>
-    <header  class="inicio">
-        <div class="contenedor-header">
-            <div class="menu">
-                <div id="logo">
-                    <a href="index.html">
-                        <img src="img/Logo.png"Logotipo">
-                    </a>
-                </div>
-                <nav class="navegacion">
-                    <a href="Renta.html">Renta</a>
-                    <a href="Venta.html">Venta</a>
-                    <a href="Componentes.html">Componentes</a>
-                    <a href="Blog.html">Blog</a>
-                    <a href="Contacto.html">Contacto</a>
-                </nav>
-                <div class="navegacion-usuario menu navegacion">
-                    <a href="#" class="icon-user">Area de Clientes</a>
-                    <a href="Formulario.html" class="boton-registrate">Ingresar</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    
+<?php include_once "includes/templates/header_secundario.php";?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">

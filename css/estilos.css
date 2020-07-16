@@ -459,3 +459,8 @@ textarea{
     display: block;
     height: 20rem;
 }
+.datos_personales{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: calc(33%-3rem);
+}

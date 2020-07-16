@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/iconos.css">
-    <link rel="stylesheet" href="css/normalice.css">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <title>Abysmal Edge</title>
-</head>
-<body >
-    <header  class="header inicio contenido-header">
-        <div class="contenedor-header">
-            <div class="menu">
-                <div id="logo">
-                    <a href="index.html">
-                        <img src="img/Logo.png"Logotipo">
-                    </a>
-                </div>
-                <nav class="navegacion">
-                    <a href="Planes.html">Planes</a>
-                    <a href="Equipos.html">Equipos</a>
-                    <a href="Gaming.html">Gaming</a>
-                    <a href="Ayuda.html">Ayuda</a>
-                    <a href="Contacto.html">Contacto</a>
-                </nav>
-                <div class="navegacion-usuario menu navegacion">
-                    <a href="#" class="icon-user">Area de Clientes</a>
-                    <a href="Inicio_Sesion.html" class="boton-registrate">Ingresar</a>
-                </div>
-            </div>
-        </div>
+<?php include_once "includes/templates/header.php";?>
         <div class="slogan">
             <h1>Renta tu Primer Equipo de Cómputo</h1>
             <h2>Nuestra empresa cuenta con mas de 50 variedades de equipos de computo a partir de $200/mes para todo tipo de situaciones</h2>
@@ -212,18 +178,6 @@
             </article>
         </div>
     </div>
-
-    <footer class="footer seccion">
-        <div class="contenedor contenedor-footer">
-            <nav class="navegacion">
-                <a href="Planes.html">Planes</a>
-                <a href="Equipos.html">Equipos</a>
-                <a href="Gaming.html">Gaming</a>
-                <a href="Ayuda.html">Ayuda</a>
-                <a href="Contacto.html">Contacto</a>
-            </nav>
-            <p class="copy">Todos los Derechos Reservados 2020 &copy</p>
-        </div>
-    </footer>
+    <?php include_once "includes/templates/footer.php";?>
 </body>
 </html>
