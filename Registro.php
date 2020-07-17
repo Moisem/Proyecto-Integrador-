@@ -1,5 +1,4 @@
 <?php include_once "includes/templates/header_secundario.php";?>
-
 <main class="contenedor">
 
 <form action="Registro_Exitoso.html" method="post">
@@ -36,20 +35,56 @@
 
             <label for="estado">Estado</label>
             <select id="estado">
-                <option value="" disabled selected>Elegir Opcion</option>
-                <option value="mexico">Mexico</option>
-                <option value="cdmx">CDMX</option>
-                <option value="veracruz">Veracruz</option>
+                <option value="" selected disabled>-Seleccionar-</option>
+                <?php
+                    try{
+                        require_once("includes/funciones/BD_conexion.php");
+                        $sql = "SELECT * FROM estado";
+                        $resultado = $conn->query($sql);
+                    }catch (\Exception $e){
+                        echo $e->getMessage();
+                    }
+                ?>
+                
+                <?php
+                    while($estados = $resultado->fetch_assoc()){?>
+                        <option value="" name="estado">
+                            <?php
+                                echo $estados['nombre'];
+                            }?>
+                        </option>
             </select>
             
             <label for="municipio">Municipio</label>
             <select name="municipio" id="municipio">
-                <option value="" disabled selected>Elegir Opcion</option>
-                <option value="lerma">Lerma</option>
-                <option value="azcapotzalco">azcapotzalco</option>
-                <option value="acula">Acula</option>
+            <?php
+                    try{
+                        require_once("includes/funciones/BD_conexion.php");
+                        $sql = "SELECT * FROM municipios";
+                        $resultado = $conn->query($sql);
+                    }catch (\Exception $e){
+                        echo $e->getMessage();
+                    }
+                ?>
+                
+                <?php
+                while($muni = $resultado->fetch_assoc()){
+                    if($estado['id']=$muni['estado_id'])
+                        {
+                        while($mun = $resultado->fetch_assoc()){?>
+                            <option value="">
+                        <?php
+                                echo $mun['nombre'];
+                            }
+                        }else{
+                            echo "<h2>ERROR<h2>";
+                        }
+                    }?>
+                            </option>
+                <?php
+                    $conn->close();
+                ?>
             </select>
-           
             <label for="calle">Calle</label>
             <input type="text" id="calle" placeholder="Ingrese su calle">
             

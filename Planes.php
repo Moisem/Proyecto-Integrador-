@@ -1,9 +1,7 @@
 <?php include_once "includes/templates/header.php";?>
 
    <main class="contenedor">
-       <h1 class="centrar-texto titulo">¡Tenemos Planes Para Ti!</h1>
        <div class="contenedor-planes">
-
         <div class="plan-hogar">
         <h2>Plan Hogar</h2>
             <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
@@ -17,7 +15,7 @@
                         <p>1 Lector de discos externo</p>
                         <p>1 Audifonos Sony</p>
                     </div>
-                <h3 class="precio">Desde $350/mes</h3>
+                <h3 class="precio">Desde $439/mes</h3>
                 <a href="Pedido_Plan.php" class="boton boton-azul Dblock">Contratar</a>
             </div>
         </div>
@@ -29,13 +27,13 @@
                     <div class="descripcion-plan-gaming">
                         <p>1 Pc Gaming Basics: </p>
                         <p>- 8GB RAM</p>
-                        <p>- Intel Core i5</p>
+                        <p>- Ryzen 5</p>
                         <p>- 2GB GPU</p>
                         <p>Perifericos RGB </p>
                         <p>1 Monitor HD 1920x1360</p>
                         <p>1 Silla Gamer </p>
                     </div>
-                <h3 class="precio-verde">Desde 1000/mes</h3>
+                <h3 class="precio-verde">Desde 1500/mes</h3>
                 <a href="Pedido_Plan.php" class="boton boton-verde Dblock">Contratar</a>
             </div>
         </div>
@@ -53,11 +51,10 @@
                         <p>5 NoBreak</p>
                         <p>5 Proyectores</p>
                     </div>
-                <h3 class="precio-dorado">Desde $2000/mes</h3>
+                <h3 class="precio-dorado">Desde $5000/mes</h3>
                 <a href="Pedido_Plan.php" class="boton boton-dorado Dblock">Contratar</a>
             </div>
         </div>
    </main>
-   <?php include_once "includes/templates/footer.php";?>
 </body>
 </html>
