@@ -2,6 +2,7 @@
 <?php 
     if(isset($_POST['submit'])){
 
+        $resultado =$_POST;
         $nombre = $_POST['nombre'];
         $ap_paterno = $_POST['ap_paterno'];
         $ap_materno = $_POST['ap_materno'];
@@ -79,7 +80,5 @@
     </div>
 </form>
 </main>
-</body>
-</html>
 </body>
 </html>
