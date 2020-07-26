@@ -21,15 +21,15 @@
                     </a>
                 </div>
                 <nav class="navegacion">
-                    <a href="Planes.php">Planes</a>
-                    <a href="Equipos.php">Equipos</a>
-                    <a href="Gaming.php">Gaming</a>
-                    <a href="Ayuda.php">Ayuda</a>
-                    <a href="Contacto.php">Contacto</a>
+                    <a href="planes.php">Planes</a>
+                    <a href="equipos.php">Equipos</a>
+                    <a href="gaming.php">Gaming</a>
+                    <a href="ayuda.php">Ayuda</a>
+                    <a href="contacto.php">Contacto</a>
                 </nav>
                 <div class="navegacion-usuario menu navegacion">
                     <a href="#" class="icon-user">Area de Clientes</a>
-                    <a href="Inicio_Sesion.php" class="boton-registrate">Ingresar</a>
+                    <a href="inicio_sesion.php" class="boton-registrate">Ingresar</a>
                 </div>
             </div>
         </div>

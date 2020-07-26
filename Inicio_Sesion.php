@@ -34,7 +34,7 @@
         </fieldset>
         <div class="contendor centrar-texto iniciar_sesion">
             <input type="submit" value="Iniciar Sesión" class="boton boton-azul-cielo" name="submit">
-            <p>¿No tienes una cuenta? <a href="Registro.php" class="IS">Crear una Cuenta</a></p>     
+            <p>¿No tienes una cuenta? <a href="registro.php" class="IS">Crear una Cuenta</a></p>     
         </div>
         </form>
 </main>

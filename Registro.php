@@ -76,7 +76,7 @@
 
     <div class="contendor centrar-texto iniciar_sesion">
         <input type="submit"  value="Crear Cuenta" class="boton boton-azul-cielo" name="submit">
-        <p>¿Ya tienes una cuenta? <a href="Inicio_Sesion.php" class="IS">Inicia Sesión</a></p>
+        <p>¿Ya tienes una cuenta? <a href="inicio_sesion.php" class="IS">Inicia Sesión</a></p>
     </div>
 </form>
 </main>

@@ -19,7 +19,7 @@
         </fieldset>
         <div class="contendor centrar-texto iniciar_sesion">
             <input type="submit" value="Contratar" class="boton boton-azul-cielo">
-            <a href="Planes.html" class="boton boton-rojo">Cancelar</a>
+            <a href="planes.html" class="boton boton-rojo">Cancelar</a>
         </div>
 </form>
 </main>

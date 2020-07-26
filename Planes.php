@@ -16,7 +16,7 @@
                         <p>1 Audifonos Sony</p>
                     </div>
                 <h3 class="precio">Desde $439/mes</h3>
-                <a href="Pedido_Plan.php" class="boton boton-azul Dblock">Contratar</a>
+                <a href="pedido_plan.php" class="boton boton-azul Dblock">Contratar</a>
             </div>
         </div>
 
@@ -34,7 +34,7 @@
                         <p>1 Silla Gamer </p>
                     </div>
                 <h3 class="precio-verde">Desde 1500/mes</h3>
-                <a href="Pedido_Plan.php" class="boton boton-verde Dblock">Contratar</a>
+                <a href="pedido_plan.php" class="boton boton-verde Dblock">Contratar</a>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
                         <p>5 Proyectores</p>
                     </div>
                 <h3 class="precio-dorado">Desde $5000/mes</h3>
-                <a href="Pedido_Plan.php" class="boton boton-dorado Dblock">Contratar</a>
+                <a href="pedido_plan.php" class="boton boton-dorado Dblock">Contratar</a>
             </div>
         </div>
    </main>
