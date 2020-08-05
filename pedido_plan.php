@@ -1,4 +1,7 @@
-<?php include_once "includes/templates/header_secundario.php";?>
+<?php 
+include_once "includes/templates/header_secundario.php";
+include_once "includes/funciones/validar_sesion.php";
+?>
 <form action="">
         <fieldset>
             <legend>Contratación de Plan</legend>

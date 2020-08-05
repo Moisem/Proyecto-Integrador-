@@ -17,7 +17,7 @@
             <div class="menu">
                 <div id="logo">
                     <a href="index.php">
-                        <img src="img/Logo.png"Logotipo">
+                        <img src="img/Logo.png" alt="Logotipo">
                     </a>
                 </div>
                 <nav class="navegacion">
@@ -29,7 +29,15 @@
                 </nav>
                 <div class="navegacion-usuario menu navegacion">
                     <a href="#" class="icon-user">Area de Clientes</a>
-                    <a href="inicio_sesion.php" class="boton-registrate">Ingresar</a>
+                    <?php 
+                        session_start();
+                        if(empty($_SESSION['id'])){
+                            echo "<a href='inicio_sesion.php' class='boton-registrate'>Ingresar</a>";  
+                        }
+                        else {
+                            echo $_SESSION['nombre'].' '.$_SESSION['apellido_paterno'];
+                        }    
+                    ?>
                 </div>
             </div>
         </div>

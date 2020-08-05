@@ -26,5 +26,17 @@
                     <a href="ayuda.php">Ayuda</a>
                     <a href="contacto.php">Contacto</a>
                 </nav>
+                <div class="navegacion-usuario menu navegacion">
+                    <a href="#" class="icon-user">Area de Clientes</a>
+                    <?php 
+                        session_start();
+                        if(empty($_SESSION['id'])){
+                            echo "<a href='inicio_sesion.php' class='boton-registrate'>Ingresar</a>";  
+                        }
+                        else {
+                            echo $_SESSION['nombre'].' '.$_SESSION['apellido_paterno'];
+                        }    
+                        ?>
+                </div>
             </div>
         </div>

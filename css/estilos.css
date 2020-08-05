@@ -533,3 +533,20 @@ textarea{
     justify-content: space-between;
     flex-basis: calc(33%-3rem);
 }
+.registrado{
+    width: 65%;
+    height: 70%;
+    margin-top: 5rem;
+    background-color: rgba(65, 105, 225, 0.548);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.registrado h3{
+    font-size: 5rem;
+    text-align: center;
+}
+.registrado h2{
+    font-size: 3rem;
+    text-align: center;
+}

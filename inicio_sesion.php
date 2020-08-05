@@ -2,19 +2,51 @@
 
 <?php 
     if(isset($_POST['submit'])){
-
         $resultado =$_POST;
         $correo = $_POST['correo'];
         $contrasena = $_POST['contrasena'];
-
         if(! (filter_has_var(INPUT_POST, 'correo') &&
-        (strlen(filter_input(INPUT_POST, 'correo')) >0 ))){
+            (strlen(filter_input(INPUT_POST, 'correo')) >0 ))){
          echo "<h3 class='error'>No has ingresado una direccion de correo electronico<h3>";
-        }
-
+            }
         if(! (filter_has_var(INPUT_POST, 'contrasena') &&
-        (strlen(filter_input(INPUT_POST, 'contrasena')) >0 ))){
+            (strlen(filter_input(INPUT_POST, 'contrasena')) >0 ))){
             echo "<h3 class='error'>Debes ingresar una contraseña<h3>";
+            }
+        try{
+            require_once("includes/funciones/BD_conexion.php");
+            $stmt = $conn->prepare("select 
+            id, 
+            nombre, 
+            apellido_paterno,
+            contrasena
+            from cliente where
+            correo = ? limit 1");
+            $stmt->bind_param(
+            "s",
+            $correo);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            $cliente = $resultado->fetch_assoc();
+            $stmt->close();
+            $conn->close();
+            /* Validar usuario */
+            if(false == $cliente){
+                echo "<h3 class='error'>Correo inexistente<h3>";
+            }
+            /* Validar contraseña */
+            if(!password_verify($contrasena , $cliente['contrasena'])){
+                echo "<h3 class='error'>Contraseña incorrecta<h3>";
+            }
+            /* Iniciar Sesion */
+            session_start();
+            $_SESSION['id'] = $cliente['id'];
+            $_SESSION['nombre'] = $cliente['nombre'];
+            $_SESSION['apellido_paterno'] = $cliente['apellido_paterno'];
+            header('Location: index.php');
+        }
+        catch (Exception $e){
+            $error = $e->getMessage();
         }
     }
 ?>

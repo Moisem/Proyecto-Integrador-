@@ -1,7 +1,7 @@
 <?php include_once "includes/templates/header.php";?>
         <div class="slogan">
             <h1>Renta tu Primer Equipo de Cómputo</h1>
-            <h2>Planes y Equipos a partir de 200 MXN/mes</h2>
+            <h2>Planes y Equipos a partir de 250 MXN/mes</h2>
             <div>
             <a href="" class="boton boton-azul">Renta Ahora</a>
             </div>
