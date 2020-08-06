@@ -55,7 +55,31 @@ img{
     flex-direction: column;
     justify-content: space-between; 
 }
-
+.contenido-header-secundario{
+    text-align: center;
+}
+.menu_perfil, .menu_perfil_opciones{
+    list-style: none;
+}
+.menu_perfil{
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+.menu_perfil_opciones{
+    display: flex;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.menu_perfil_opciones li a{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0.1rem;
+}
 .slogan{
     text-align: center;
     font-size: 2rem;
@@ -549,4 +573,83 @@ textarea{
 .registrado h2{
     font-size: 3rem;
     text-align: center;
+}
+.fondo_usuarios{
+    background-color:rgba(54, 52, 52, 0.344);
+    background-image: none;
+}
+.area_clientes_cabecera {
+    width: 95%;
+    display: flex;
+    background-color: rgb(5, 5, 5);
+    justify-content: space-evenly;
+    padding: 0.5rem 0.5rem;
+    border: solid 0.2rem #00aeff;  
+}
+.area_clientes_cabecera a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color:white;
+}
+.area_clientes_cabecera a:hover{
+    color: #00aeff;
+}
+.area_clientes_contenido{
+    width: 95%;
+    height: 40rem;
+}
+.area_clientes{
+    align-content: center;
+}
+.encabezado_pedidos{
+    list-style: none;
+    display: flex;
+    padding: none;
+    text-align: center;
+}
+.encabezado_pedidos li{
+    width: 100%;
+    font-size: 1.4rem;
+    background-color:#00aeffcb;
+    text-align: center;
+    border-left: solid 0.2rem #00aeff;
+    border-right: solid 0.2rem #00aeff;
+}
+.informacion_pedidos{
+    list-style: none;
+    display: flex;
+    padding: none;
+}
+.informacion_pedidos li{
+    width: 100%;
+    font-size: 1.4rem;
+    padding: flex flex;
+    background-color:#00aeff79;
+    text-align: center;
+    border-left: solid 0.2rem #00aeff;
+    border-right: solid 0.2rem #00aeff;
+}
+.informacion_pedidos li a{
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 0.15rem 0.15rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5rem;
+}
+.contendor_pedidos{
+    width: 100%;
+    display: flex;
+    justify-content: center center;
+}
+.historial_pedidos{
+    width: 95%;
+}
+.logo-area-clientes{
+    align-content: center;
+    text-align: center;
+    vertical-align: center;
+    padding-top: 10rem;
 }

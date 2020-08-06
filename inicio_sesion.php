@@ -32,11 +32,13 @@
             $conn->close();
             /* Validar usuario */
             if(false == $cliente){
-                echo "<h3 class='error'>Correo inexistente<h3>";
+                echo "<h3 class='error contenedor titulo centrar-texto'>Correo inexistente</h3>";
+                exit;
             }
             /* Validar contraseña */
-            if(!password_verify($contrasena , $cliente['contrasena'])){
-                echo "<h3 class='error'>Contraseña incorrecta<h3>";
+            if(!password_verify($_POST['contrasena'] , $cliente['contrasena'])){
+                echo "<h3 class='error contenedor titulo centrar-texto'>Contraseña incorrecta</h3>";
+                exit;
             }
             /* Iniciar Sesion */
             session_start();

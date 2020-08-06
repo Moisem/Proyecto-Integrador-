@@ -1,5 +1,6 @@
 <?php include_once "includes/templates/header.php";
-include_once "includes/funciones/validar_sesion.php";?>
+include_once "includes/funciones/validar_sesion.php";
+?>
 <form action="" method="post">
 <fieldset class="direccion">
         <legend>Direcciones de Envio</legend>

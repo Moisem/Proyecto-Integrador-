@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
     if(empty($_SESSION['id'])){
         header('Location: inicio_sesion.php');
     }

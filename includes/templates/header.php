@@ -24,18 +24,23 @@
                     <a href="planes.php">Planes</a>
                     <a href="equipos.php">Equipos</a>
                     <a href="gaming.php">Gaming</a>
-                    <a href="ayuda.php">Ayuda</a>
                     <a href="contacto.php">Contacto</a>
                 </nav>
                 <div class="navegacion-usuario menu navegacion">
-                    <a href="#" class="icon-user">Area de Clientes</a>
+                    <a href="area_de_clientes.php" class="icon-user">Area de Clientes</a>
                     <?php 
                         session_start();
                         if(empty($_SESSION['id'])){
                             echo "<a href='inicio_sesion.php' class='boton-registrate'>Ingresar</a>";  
                         }
                         else {
-                            echo $_SESSION['nombre'].' '.$_SESSION['apellido_paterno'];
+                            echo "<div class='menu_perfil'>";
+                                    echo $_SESSION['nombre'].' '.$_SESSION['apellido_paterno'];
+                                    echo "<ul class='menu_perfil_opciones'>";
+                                        echo "<li><a href='direccion.php'>Direcciones de envio</a></li>";
+                                        echo "<li><a href='includes/funciones/cerrar_sesion.php'>Cerrar Sesion</a></li>";
+                                    echo "</ul>";
+                            echo "</div>";
                         }    
                     ?>
                 </div>
