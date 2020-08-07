@@ -7,7 +7,7 @@
          <div class="contenedor-planes">
 
          <div class="plan-gaming">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
+                <img src="img/lap_gamer_1.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
                 <?php
                     try{
@@ -27,14 +27,14 @@
                         <p>RAM: <?php echo $Equipo['ram']?></p>
                         <p>GPU: <?php echo $Equipo['grafica']?></p>
                         <p>Resolucion: <?php echo $Equipo['resolucion']?></p>
-                        <h3 class="precio-verde">$<?php echo $Equipo['costo']?></h3>
-                        <a href="#" class="boton boton-verde Dblock">Rentar</a>
+                        <h3 class="precio">$<?php echo $Equipo['costo']?></h3>
+                        <a href="#" class="boton boton-azul Dblock">Rentar</a>
                     </div>
                 </div>
             </div>
 
             <div class="plan-gaming">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
+                <img src="img/lap_gamer_2.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
                 <?php
                     try{
@@ -54,14 +54,14 @@
                         <p>RAM: <?php echo $Equipo['ram']?></p>
                         <p>GPU: <?php echo $Equipo['grafica']?></p>
                         <p>Resolucion: <?php echo $Equipo['resolucion']?></p>
-                        <h3 class="precio-verde">$<?php echo $Equipo['costo']?></h3>
-                        <a href="#" class="boton boton-verde Dblock">Rentar</a>
+                        <h3 class="precio">$<?php echo $Equipo['costo']?></h3>
+                        <a href="#" class="boton boton-azul Dblock">Rentar</a>
                     </div>
                 </div>
             </div>
 
             <div class="plan-gaming">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
+                <img src="img/lap_gamer_3.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
                 <?php
                     try{
@@ -81,8 +81,8 @@
                         <p>RAM: <?php echo $Equipo['ram']?></p>
                         <p>GPU: <?php echo $Equipo['grafica']?></p>
                         <p>Resolucion: <?php echo $Equipo['resolucion']?></p>
-                        <h3 class="precio-verde">$<?php echo $Equipo['costo']?></h3>
-                        <a href="#" class="boton boton-verde Dblock">Rentar</a>
+                        <h3 class="precio">$<?php echo $Equipo['costo']?></h3>
+                        <a href="#" class="boton boton-azul Dblock">Rentar</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
          <div class="contenedor-planes">
 
          <div class="plan-gaming">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
+                <img src="img/desktop_gaming_1.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
                 <?php
                     try{
@@ -113,14 +113,14 @@
                         <p>RAM: <?php echo $Equipo['ram']?></p>
                         <p>GPU: <?php echo $Equipo['grafica']?></p>
                         <p>Resolucion: <?php echo $Equipo['resolucion']?></p>
-                        <h3 class="precio-verde">$<?php echo $Equipo['costo']?></h3>
-                        <a href="#" class="boton boton-verde Dblock">Rentar</a>
+                        <h3 class="precio">$<?php echo $Equipo['costo']?></h3>
+                        <a href="#" class="boton boton-azul Dblock">Rentar</a>
                     </div>
                 </div>
             </div>
 
             <div class="plan-gaming">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
+                <img src="img/desktop_gaming_2.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
                 <?php
                     try{
@@ -140,14 +140,14 @@
                         <p>RAM: <?php echo $Equipo['ram']?></p>
                         <p>GPU: <?php echo $Equipo['grafica']?></p>
                         <p>Resolucion: <?php echo $Equipo['resolucion']?></p>
-                        <h3 class="precio-verde">$<?php echo $Equipo['costo']?></h3>
-                        <a href="#" class="boton boton-verde Dblock">Rentar</a>
+                        <h3 class="precio">$<?php echo $Equipo['costo']?></h3>
+                        <a href="#" class="boton boton-azul Dblock">Rentar</a>
                     </div>
                 </div>
             </div>
 
             <div class="plan-gaming">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
+                <img src="img/dragonforce.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
                 <?php
                     try{
@@ -167,8 +167,8 @@
                         <p>RAM: <?php echo $Equipo['ram']?></p>
                         <p>GPU: <?php echo $Equipo['grafica']?></p>
                         <p>Resolucion: <?php echo $Equipo['resolucion']?></p>
-                        <h3 class="precio-verde">$<?php echo $Equipo['costo']?></h3>
-                        <a href="#" class="boton boton-verde Dblock">Rentar</a>
+                        <h3 class="precio">$<?php echo $Equipo['costo']?></h3>
+                        <a href="#" class="boton boton-azul Dblock">Rentar</a>
                     </div>
                 </div>
             </div>
