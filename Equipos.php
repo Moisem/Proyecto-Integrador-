@@ -7,8 +7,8 @@
          <div class="contenedor-planes">
 
             <div class="plan-hogar">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
+                    <img src="img/lap_asus_hogar_1.jpg" alt="Adquiere Equipos">
                 <?php
                     try{
                         require_once("includes/funciones/BD_conexion.php");
@@ -34,8 +34,8 @@
             </div>
 
             <div class="plan-hogar">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
+                    <img src="img/lap_asus_hogar_2.jpg" alt="Adquiere Equipos">
                 <?php
                     try{
                         $sql = "SELECT * FROM equipo where id=2";
@@ -60,8 +60,8 @@
             </div>
 
             <div class="plan-hogar">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
+                    <img src="img/lap_ideapad_hogar_3.jpg" alt="Adquiere Equipos">
                 <?php
                     try{
                         $sql = "SELECT * FROM equipo where id=3";
@@ -91,8 +91,8 @@
          <div class="contenedor-planes">
 
          <div class="plan-hogar">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
+                    <img src="img/desktop_hogar_1.jpg" alt="Adquiere Equipos">
                 <?php
                     try{
                         $sql = "SELECT * FROM equipo where id=4";
@@ -117,8 +117,8 @@
             </div>
 
             <div class="plan-hogar">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
+                    <img src="img/desktop_hogar_2.jpg" alt="Adquiere Equipos">
                 <?php
                     try{
                         $sql = "SELECT * FROM equipo where id=5";
@@ -143,8 +143,8 @@
             </div>
 
             <div class="plan-hogar">
-                <img src="img/mantenimiento.jpg" alt="Adquiere Equipos">
                 <div class="contenido-plan">
+                    <img src="img/desktop_hogar_3.jpg" alt="Adquiere Equipos">
                 <?php
                     try{
                         $sql = "SELECT * FROM equipo where id=6";

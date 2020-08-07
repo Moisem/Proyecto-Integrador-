@@ -294,6 +294,10 @@ img{
     font-size: 2rem;
     font-weight: 900;
 }
+.plan-hogar img, .plan-gaming img, .plan-empresarial img{
+    width: 50rem;
+    height: 20rem;
+}
 .contenido-plan h3, .contenido-plan p{
     margin: 0;
     margin-bottom: 1rem;
@@ -321,7 +325,7 @@ img{
     border-style: solid;
     border-color: #00aeff;
     border-width: 0.3rem;
-    background-color:#00aeff38;
+    background-color:#e2e2e2dc;
     height: 55rem;
     /*border: 0.3rem double lightseagreen;*/
 }
@@ -333,9 +337,9 @@ img{
 .plan-gaming{
     flex-basis: calc(33.3% - 5rem);
     border-style: solid;
-    border-color: rgba(20, 230, 66, 0.500);
+    border-color: rgb(255, 255, 255);
     border-width: 0.3rem;
-    background-color:rgba(20, 230, 66, 0.100);
+    background-color:rgba(66, 2, 75, 0.9);
     height: 55rem;
     /*border: 0.3rem double lightseagreen;*/
 }
@@ -347,9 +351,9 @@ img{
 .plan-empresarial{
     flex-basis: calc(33.3% - 5rem);
     border-style: solid;
-    border-color: rgba(240, 204, 3, 0.500);
+    border-color: rgb(253, 0, 0);
     border-width: 0.3rem;
-    background-color:rgba(240, 204, 3, 0.100);
+    background-color:rgba(110, 0, 0, 0.658);
     height: 55rem;
     /*border: 0.3rem double lightseagreen;*/
 }
@@ -362,16 +366,17 @@ img{
     border: 0.3rem double #00aeff;
     padding: 1rem;
     background-color: #00aeff56;
+    color: black;
 }
 .descripcion-plan-gaming{
-    border: 0.3rem double rgba(20, 230, 66, 0.500);
+    border: 0.3rem double rgb(255, 255, 255);
     padding: 1rem;
-    background-color: rgba(20, 230, 66, 0.300);
+    background-color: rgba(66, 2, 75, 0.9);
 }
 .descripcion-plan-empresarial{
-    border: 0.3rem double rgba(240, 204, 3, 0.500);
+    border: 0.3rem double rgb(253, 0, 0);
     padding: 1rem;
-    background-color: rgba(240, 204, 3, 0.300);
+    background-color: rgb(110, 0, 0);
 }
 /* PC GAMER*/
 .anuncio{

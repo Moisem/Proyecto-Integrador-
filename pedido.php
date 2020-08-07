@@ -2,7 +2,7 @@
 include_once "includes/templates/header_secundario.php";
 include_once "includes/funciones/validar_sesion.php";
 ?>
-<form action="">
+<form action="<?php echo  htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
         <fieldset>
             <legend>Contratación de Plan</legend>
             <label for="no_servicios">Numero de Servicios</label>
