@@ -54,7 +54,7 @@
 ?>
 
 <main class="contenedor">
-    <form action="<?php echo  htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
+    <form class="formulario" action="<?php echo  htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
         <h2 class="FW-900 centrar-texto">Inicia Sesion Para Continuar</h2>
         <fieldset>
         <legend >Ingresar</legend>

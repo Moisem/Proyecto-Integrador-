@@ -16,7 +16,12 @@
                         <p>1 Audifonos Sony</p>
                     </div>
                 <h3 class="precio">Desde $439/mes</h3>
-                <a href="pedido_plan.php" class="boton boton-azul Dblock">Contratar</a>
+                <form action="pedido.php" method="post">
+                    <input type="text" name="id" id="id" value="1">
+                    <input type="text" name="nombre" id="nombre" value="Hogar">
+                    <input type="text" name="costo" id="costo" value="439">
+                    <input type="submit" value="Rentar" class="boton boton-azul DBlock" name="boton_rentar">
+                </form>
             </div>
         </div>
 
@@ -34,7 +39,12 @@
                         <p>1 Silla Gamer </p>
                     </div>
                 <h3 class="precio">Desde 1500/mes</h3>
-                <a href="pedido_plan.php" class="boton boton-azul Dblock">Contratar</a>
+                <form action="pedido.php" method="post">
+                    <input type="text" name="id" id="id" value="2">
+                    <input type="text" name="nombre" id="nombre" value="Gaming">
+                    <input type="text" name="costo" id="costo" value="1500">
+                    <input type="submit" value="Rentar" class="boton boton-azul DBlock" name="boton_rentar">
+                </form>
             </div>
         </div>
 
@@ -52,7 +62,12 @@
                         <p>5 Proyectores</p>
                     </div>
                 <h3 class="precio">Desde $5000/mes</h3>
-                <a href="pedido_plan.php" class="boton boton-azul Dblock">Contratar</a>
+                <form action="pedido.php" method="post">
+                    <input type="text" name="id" id="id" value="3">
+                    <input type="text" name="nombre" id="nombre" value="Empresarial">
+                    <input type="text" name="costo" id="costo" value="5000">
+                    <input type="submit" value="Rentar" class="boton boton-azul DBlock" name="boton_rentar">
+                </form>
             </div>
         </div>
    </main>

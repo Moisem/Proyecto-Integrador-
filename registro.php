@@ -1,7 +1,7 @@
 <?php include_once "includes/templates/header_secundario.php";?>
 <main class="contenedor">
 
-<form action="validar_registro.php" method="post">
+<form class="formulario" action="validar_registro.php" method="post">
     <h2 class="FW-900 centrar-texto">Crea una Nueva Cuenta en Abysmal Edge</h2>
         <fieldset>
             <legend>Datos de Usuario</legend>
