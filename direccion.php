@@ -1,21 +1,45 @@
 <?php include_once "includes/templates/header.php";
 include_once "includes/funciones/validar_sesion.php";
+require_once ("includes/funciones/BD_conexion.php");
 ?>
 <form action="" method="post">
 <fieldset class="direccion">
         <legend>Direcciones de Envio</legend>
+          
+            <div class="form-group"> 
+                <label for="estado">Estado</label>
+                <select class="form-control form-control-sm" id="estado">
+                    <option value="" selected disabled>-Seleccionar-</option>
+                    <option value="" name="estado" ></option>
+                    <?php
+                $sql = 'select id, estado from estado order by estado asc';
+                foreach ($conexion->query($sql) as $ ) {
+                echo <<<fin
 
-            <label for="estado">Estado</label>
-            <select id="estado">
-                <option value="" selected disabled>-Seleccionar-</option>
-                <option value="" name="estado"></option>
-            </select>
-            
+                <option value="{$ ['id']}">{$ ['nombre']}</option>
+fin;
+                }
+                ?>
+                </select>
+            </div>
+       
+        <div class="form-group"> 
             <label for="municipio">Municipio</label>
-            <select name="municipio" id="municipio">
+            <select class="form-control form-control-sm" name="municipio" id="municipio">
             <option value="" selected disabled>-Seleccionar-</option>
             <option value=""></option>
+            <?php
+                $sql = 'select id, municipio from municipio order by municipio asc';
+                foreach ($conexion->query($sql) as $) {
+                echo <<<fin
+
+                <option value="{$['id']}">{$['municipio']}</option>
+fin;
+                }
+                ?>
             </select>
+        </div>
+
             <label for="calle">Calle</label>
             <input type="text" id="calle" placeholder="Ingrese su calle">
             
