@@ -2,7 +2,7 @@
 include_once "includes/funciones/validar_sesion.php";
 require_once ("includes/funciones/BD_conexion.php");
 ?>
-<form action="" method="post">
+<form class="formulario" action="" method="post">
 <fieldset class="direccion">
         <legend>Direcciones de Envio</legend>
           

@@ -337,9 +337,9 @@ img{
 .plan-gaming{
     flex-basis: calc(33.3% - 5rem);
     border-style: solid;
-    border-color: rgb(255, 255, 255);
+    border-color: rgba(182, 3, 206, 0.9);
     border-width: 0.3rem;
-    background-color:rgba(66, 2, 75, 0.9);
+    background-color:rgba(102, 0, 116, 0.9);
     height: 55rem;
     /*border: 0.3rem double lightseagreen;*/
 }
@@ -475,7 +475,7 @@ img{
 }
 
 /*Formularios*/
-form{
+.formulario{
     border-radius: 0.4rem;
     background-color: #0d2a689a;
     padding-top: 0.015rem;
@@ -491,6 +491,7 @@ form{
     width: 50%;
     font-size: 1.6rem;
 }
+
 label{
     display: block;
 }
@@ -657,4 +658,24 @@ textarea{
     text-align: center;
     vertical-align: center;
     padding-top: 10rem;
+}
+/* Responsive */
+@media (min-width:768px){
+    .tres-columnas{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .plan-gaming{
+        flex-basis: calc(33.3% - 10rem);
+        margin-top: 2rem;
+    }
+    .plan-hogar{
+        flex-basis: calc(33.3% - 10rem);
+        margin-top: 2rem;
+    }
+    .plan-empresarial{
+        flex-basis: calc(33.3% - 10rem);
+        margin-top: 2rem;
+    }
 }

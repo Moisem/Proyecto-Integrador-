@@ -11,9 +11,6 @@
         $pregunta_1 = password_hash($_POST['pregunta_1'],PASSWORD_BCRYPT,['cost' => 12 ]);
         $pregunta_2 = password_hash($_POST['pregunta_2'],PASSWORD_BCRYPT,['cost' => 12 ]);
         $pregunta_3 = password_hash($_POST['pregunta_3'],PASSWORD_BCRYPT,['cost' => 12 ]);
-        echo "<pre>";
-        var_dump($resultado);
-        echo "</pre>";
         if(! (filter_has_var(INPUT_POST, 'nombre') &&
         (strlen(filter_input(INPUT_POST, 'nombre')) >0 ))){
          echo "<h3 class='error'>Ingresa un nombre<h3>";
