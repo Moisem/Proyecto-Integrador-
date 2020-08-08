@@ -1,12 +1,10 @@
 <?php
 include_once "includes/funciones/validar_sesion.php";
-<<<<<<< HEAD
 include_once "includes/templates/header_secundario.php";
 ?>
 <form class="formulario" action="" method="post">
 <fieldset class="direccion">
         <legend>Direccion de Envio</legend>
-=======
 require_once ("includes/funciones/BD_conexion.php");
 ?>
 <form class="formulario" action="" method="post">
@@ -22,7 +20,6 @@ require_once ("includes/funciones/BD_conexion.php");
                 $sql = 'select id, estado from estado order by estado asc';
                 foreach ($conexion->query($sql) as $ ) {
                 echo <<<fin
->>>>>>> 598863b661f4549550c9bb9e55a664f875aacbb4
 
                 <option value="{$ ['id']}">{$ ['nombre']}</option>
 fin;

@@ -19,7 +19,8 @@
                 $id = $_SESSION['id'];
                 try{
                     require_once("includes/funciones/BD_conexion.php");
-                    $stmt = $conn->prepare("select  
+                    $stmt = $conn->prepare("select
+                    id,  
                     fecha_inicio,
                     fecha_fin,
                     fecha_inicio,
@@ -43,27 +44,31 @@
                 <ul class="encabezado_pedidos">
                     <li>Fecha de contratacion</li>
                     <li>Fecha de finalizacion</li>
-                    <li>Servicio</li>
                     <li>Costo</li>
                     <li>Estado</li>
                     <li></li>
                     <li></li>
                 </ul>
-                
-                <?php
-                    foreach($cliente as $datos){
-                        if($datos['estatus'] == "ACTIVO"){
-                            echo "<ul class='informacion_pedidos'>";
-                            foreach($datos as $dato){
-                                echo "<li>".$dato."</li>";
+                    <?php
+                        foreach($cliente as $datos){
+                            if($datos['estatus'] == "ACTIVO"){
+                                echo "<form action='editor_de_pedidos.php' method='post' target='_parent'>";
+                                echo "<ul class='informacion_pedidos'>";
+                                foreach($datos as $key => $dato){
+                                    if($key=="id"){
+                                        echo "<input type='hidden' value='$dato' name='$key'>";
+                                    }else{
+                                        echo "<li>".$dato."</li>";
+                                        echo "<input type='hidden' value='$dato' name='$key'>";
+                                    }
+                                }
+                                echo "<li><input type='submit' style='color:white; border-radius:0.2rem;' value='cancelar' name='cancelar' class='boton-rojo'></li>";
+                                echo "<li><input type='submit' style='color:white; border-radius:0.2rem;' value='cambiar dia de entrega' name='editar' class='boton-verde'></li>";
+                                echo "</ul></form>";
+                                }
                             }
-                            echo "<li><a href='cancelar_servicio.php' class='boton-rojo'>Cancelar</a></li>";
-                            echo "<li><a href='cancelar_servicio.php' class='boton-verde'>Editar</a></li>";
-                            echo "</ul>";
-                        }
-                            echo "</ul>";
-                        }
-                ?>
+                    ?>
+                </form>
         </div>
     </div>
                 <?php/*

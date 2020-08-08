@@ -23,7 +23,6 @@ include_once "includes/funciones/validar_sesion.php";
                     require_once("includes/funciones/BD_conexion.php");
                     $stmt = $conn->prepare("select  
                     fecha_inicio,
-                    fecha_inicio,
                     fecha_fin,
                     estatus,
                     subtotal
@@ -45,7 +44,6 @@ include_once "includes/funciones/validar_sesion.php";
                 <ul class="encabezado_pedidos">
                     <li>Fecha de contratacion</li>
                     <li>Fecha de finalizacion</li>
-                    <li>Servicio</li>
                     <li>Costo</li>
                     <li>Estado</li>
                 </ul>
