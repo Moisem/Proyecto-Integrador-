@@ -1,4 +1,4 @@
-<?php include_once "includes/templates/header.php";?>
+<?php include_once "includes/templates/header_terciario.php";?>
    <main class="contenedor">
        <h1 class="centrar-texto titulo">Comunicate con Nosotros</h1>
    </main>

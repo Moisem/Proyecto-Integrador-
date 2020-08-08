@@ -1,9 +1,10 @@
-<?php include_once "includes/templates/header.php";
+<?php
 include_once "includes/funciones/validar_sesion.php";
+include_once "includes/templates/header_secundario.php";
 ?>
 <form class="formulario" action="" method="post">
 <fieldset class="direccion">
-        <legend>Direcciones de Envio</legend>
+        <legend>Direccion de Envio</legend>
 
             <label for="estado">Estado</label>
             <select id="estado">
@@ -27,6 +28,9 @@ include_once "includes/funciones/validar_sesion.php";
             
             <label for="codigo postal">Codigo Postal</label>
             <input type="text" id="codigo postal" placeholder="Ingrese su Nombre">
+
+            <label for="referencias">Referencias personales</label>
+            <textarea name="referencias" id="referencias"></textarea>
         </fieldset>
         <div class="agregar-direccion contenedor">
             <input type="submit"  value="Agregar Direccion de Envio" class="boton boton-azul-cielo">

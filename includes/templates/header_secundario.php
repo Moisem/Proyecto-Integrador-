@@ -29,7 +29,6 @@
                 <div class="navegacion-usuario menu navegacion">
                     <a href="area_de_clientes.php" class="icon-user">Area de Clientes</a>
                     <?php 
-                        session_start();
                         if(empty($_SESSION['id'])){
                             echo "<a href='inicio_sesion.php' class='boton-registrate'>Ingresar</a>";  
                         }

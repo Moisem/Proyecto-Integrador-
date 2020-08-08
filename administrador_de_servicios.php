@@ -33,7 +33,7 @@
                     $id);
                     $stmt->execute();
                     $resultado = $stmt->get_result();
-                    $cliente = $resultado->fetch_all();
+                    $cliente = $resultado->fetch_all(MYSQLI_ASSOC);
                     $stmt->close();
                     $conn->close();
                 }catch (\Exception $e){
@@ -52,7 +52,7 @@
                 
                 <?php
                     foreach($cliente as $datos){
-                        if($datos['3'] == "ACTIVO"){
+                        if($datos['estatus'] == "ACTIVO"){
                             echo "<ul class='informacion_pedidos'>";
                             foreach($datos as $dato){
                                 echo "<li>".$dato."</li>";
@@ -60,14 +60,9 @@
                             echo "<li><a href='cancelar_servicio.php' class='boton-rojo'>Cancelar</a></li>";
                             echo "<li><a href='cancelar_servicio.php' class='boton-verde'>Editar</a></li>";
                             echo "</ul>";
-                        }else{
-                            echo "<ul class='informacion_pedidos'>";
-                            foreach($datos as $dato){
-                                echo "<li>".$dato."</li>";
-                            }
+                        }
                             echo "</ul>";
                         }
-                    }
                 ?>
         </div>
     </div>
