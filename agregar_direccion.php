@@ -39,8 +39,4 @@ include_once "includes/funciones/validar_sesion.php";
             $error = $e->getMessage();
         }
     }
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> e34b2ec9326ff76ceb7980b040b5dfa1384bbce2

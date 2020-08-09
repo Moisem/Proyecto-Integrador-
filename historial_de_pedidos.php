@@ -45,8 +45,8 @@ include_once "includes/funciones/validar_sesion.php";
                 <ul class="encabezado_pedidos">
                     <li>Fecha de contratacion</li>
                     <li>Fecha de finalizacion</li>
-                    <li>Costo</li>
                     <li>Estado</li>
+                    <li>Costo</li>
                 </ul>
                 
                 <?php
