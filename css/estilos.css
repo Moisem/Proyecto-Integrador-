@@ -491,6 +491,14 @@ img{
     width: 50%;
     font-size: 1.6rem;
 }
+.domicilio{
+    display: flex;
+    justify-content: space-between;
+}
+.domicilio div:first-of-type{
+    width: calc(95% - 1rem);
+}
+    
 label{
     display: block;
 }
@@ -598,7 +606,7 @@ textarea{
     width: 100%;
     color: white;
     display: block;
-    height: 20rem;
+    height: 10rem;
 }
 .datos_personales{
     display: flex;

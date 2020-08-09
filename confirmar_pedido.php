@@ -16,28 +16,32 @@
         $equipo_id = $_POST['id_renta'];
     }
     $cliente_id = $_SESSION['id'];
+    $direccion_id = $_POST['direccion_id'];
     if(isset($_POST['submit'])){
         try{
             require_once("includes/funciones/BD_conexion.php");
             $stmt = $conn->prepare("insert into detalle_renta (
+                id,
                 fecha_inicio, 
                 fecha_fin, 
                 estatus, 
                 subtotal, 
                 renta_id,
                 equipo_id,
-                cliente_id
+                cliente_id,
+                direccion_id
                 )
                 values 
-                (?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssssss", 
+                (' ',?,?,?,?,?,?,?,?)");
+            $stmt->bind_param("ssssssss", 
             $fecha_inicio, 
             $fecha_fin, 
             $estatus, 
             $subtotal, 
             $renta_id,
             $equipo_id,
-            $cliente_id);
+            $cliente_id,
+            $direccion_id);
             $stmt->execute();
             $stmt->close();
             $conn->close();
@@ -49,6 +53,7 @@
             echo "ID de Plan =".$renta_id."<br>";
             echo "ID de equipo =".$equipo_id."<br>";
             echo "ID de cliente =".$cliente_id."<br>";
+            echo "ID de cliente =".$direccion_id."<br>";
             echo "hecho";
         }
         catch (Exception $e){

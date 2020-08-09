@@ -9,6 +9,31 @@ include_once "includes/templates/header_terciario.php";
     $fecha_entrega = date("Y-m-d",strtotime($fecha_actual."+ 3 days"));
     $fecha_vencimiento = date("Y-m-d",strtotime($fecha_entrega."+ 30 days"));      
     ?>
+    <?php
+    $id = $_SESSION['id'];
+    try{
+        require_once("includes/funciones/BD_conexion.php");
+        $sql = "SELECT 
+        direccion.id,
+        direccion.calle, 
+        direccion.no_ext, 
+        direccion.no_int, 
+        direccion.cp, 
+        estado.nombre_estado, 
+        municipios.nombre FROM direccion
+        INNER JOIN estado ON direccion.estado_id = estado.id
+        INNER JOIN municipios ON direccion.municipio_id = municipios.id
+        AND direccion.usuario_id= ? ";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $id);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        $stmt->close();
+        $conn->close();
+    }catch (\Exception $e){
+        echo $e->getMessage();
+    }
+?>
     <div class="contenedor centrar-texto">
         <h1 class="titulo FW-300">Rentar <?php echo $servicio;?></h1>
     </div>
@@ -32,6 +57,16 @@ include_once "includes/templates/header_terciario.php";
                     <label for="persona_que_recibe" class="">Nombre de quien recibirá el equipo</label>
                     <p><?php echo $_SESSION['nombre']." ".$_SESSION['apellido_paterno'];?></p> 
                     <input id="persona_que_recibe" type="hidden" name="cliente" value="<?php echo $_SESSION['nombre']." ".$_SESSION['apellido_paterno'];?>">
+
+                    <label for="direccion_id">Selecciona tu direccion de envio</label>
+                    <select name="direccion_id" id="direccion_id" required>
+                        <option value="" selected disabled>-Seleccionar-</option>
+                                <?php while ($direcciones = $resultado->fetch_assoc()) { ?>
+                                    <option value="<?php echo $direcciones['id'];?>">
+                                    <?php echo $direcciones['calle']." #".$direcciones['no_ext']." int: ".$direcciones['no_int'].", ".$direcciones['cp'].", ".$direcciones['nombre'].", ".$direcciones['nombre_estado'];?>
+                                    </option>
+                                <?php } ?>
+                    </select>
 
                     <label class="centrar-texto"" for="total">Total a Pagar</label>   
                     <p class="precio centrar-texto">$<?php echo $costo?></p>

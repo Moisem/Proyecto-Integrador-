@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap_css/bootstrap.min.css">        
     <link rel="stylesheet" href="css/iconos.css">
     <link rel="stylesheet" href="css/normalice.css">
     <link rel="stylesheet" href="css/estilos.css">
@@ -68,15 +69,11 @@
                                 }
                             }
                     ?>
-                </form>
+            <div class="alert alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
         </div>
     </div>
-                <?php/*
-                    if($renta == NULL){
-                        echo $equipo['equipo.modelo'];
-                    }else{
-                        echo $renta['renta.nombre'];
-                    }*/
-                ?>
+    <?php include_once 'includes/templates/scrips.php'?>
 </body>
 </html>
