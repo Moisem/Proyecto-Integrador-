@@ -25,14 +25,14 @@
                 fecha_inicio, 
                 fecha_fin, 
                 estatus, 
-                subtotal, 
+                subtotal,   
                 renta_id,
                 equipo_id,
                 cliente_id,
                 direccion_id
                 )
                 values 
-                (' ',?,?,?,?,?,?,?,?)");
+                ('',?,?,?,?,?,?,?,?)");
             $stmt->bind_param("ssssssss", 
             $fecha_inicio, 
             $fecha_fin, 
