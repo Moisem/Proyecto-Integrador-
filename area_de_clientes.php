@@ -1,5 +1,7 @@
-<?php include_once "includes/templates/header_secundario.php";
-include_once "includes/funciones/validar_sesion.php";?>
+<?php
+include_once "includes/funciones/validar_sesion.php";
+include_once "includes/templates/header_secundario.php";
+?>
 <main class="contenedor">
        <h1 class="centrar-texto titulo">Area de clientes</h1>
 </main>

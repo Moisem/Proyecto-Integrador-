@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap_css/bootstrap.min.css">        
     <link rel="stylesheet" href="css/iconos.css">
     <link rel="stylesheet" href="css/normalice.css">
     <link rel="stylesheet" href="css/estilos.css">
@@ -19,7 +20,8 @@
                 $id = $_SESSION['id'];
                 try{
                     require_once("includes/funciones/BD_conexion.php");
-                    $stmt = $conn->prepare("select  
+                    $stmt = $conn->prepare("select
+                    id,  
                     fecha_inicio,
                     fecha_fin,
                     fecha_inicio,
@@ -33,7 +35,7 @@
                     $id);
                     $stmt->execute();
                     $resultado = $stmt->get_result();
-                    $cliente = $resultado->fetch_all();
+                    $cliente = $resultado->fetch_all(MYSQLI_ASSOC);
                     $stmt->close();
                     $conn->close();
                 }catch (\Exception $e){
@@ -43,40 +45,35 @@
                 <ul class="encabezado_pedidos">
                     <li>Fecha de contratacion</li>
                     <li>Fecha de finalizacion</li>
-                    <li>Servicio</li>
-                    <li>Costo</li>
                     <li>Estado</li>
+                    <li>Costo</li>
                     <li></li>
                     <li></li>
                 </ul>
-                
-                <?php
-                    foreach($cliente as $datos){
-                        if($datos['3'] == "ACTIVO"){
-                            echo "<ul class='informacion_pedidos'>";
-                            foreach($datos as $dato){
-                                echo "<li>".$dato."</li>";
+                    <?php
+                        foreach($cliente as $datos){
+                            if($datos['estatus'] == "ACTIVO"){
+                                echo "<form action='editor_de_pedidos.php' method='post' target='_parent'>";
+                                echo "<ul class='informacion_pedidos'>";
+                                foreach($datos as $key => $dato){
+                                    if($key=="id"){
+                                        echo "<input type='hidden' value='$dato' name='$key'>";
+                                    }else{
+                                        echo "<li>".$dato."</li>";
+                                        echo "<input type='hidden' value='$dato' name='$key'>";
+                                    }
+                                }
+                                echo "<li><input type='submit' style='color:white; border-radius:0.2rem;' value='cancelar' name='cancelar' class='boton-rojo'></li>";
+                                echo "<li><input type='submit' style='color:white; border-radius:0.2rem;' value='cambiar dia de entrega' name='editar' class='boton-verde'></li>";
+                                echo "</ul></form>";
+                                }
                             }
-                            echo "<li><a href='cancelar_servicio.php' class='boton-rojo'>Cancelar</a></li>";
-                            echo "<li><a href='cancelar_servicio.php' class='boton-verde'>Editar</a></li>";
-                            echo "</ul>";
-                        }else{
-                            echo "<ul class='informacion_pedidos'>";
-                            foreach($datos as $dato){
-                                echo "<li>".$dato."</li>";
-                            }
-                            echo "</ul>";
-                        }
-                    }
-                ?>
+                    ?>
+            <div class="alert alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
         </div>
     </div>
-                <?php/*
-                    if($renta == NULL){
-                        echo $equipo['equipo.modelo'];
-                    }else{
-                        echo $renta['renta.nombre'];
-                    }*/
-                ?>
+    <?php include_once 'includes/templates/scrips.php'?>
 </body>
 </html>

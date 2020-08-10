@@ -1,9 +1,25 @@
-<?php include_once "includes/templates/header.php";
+<?php
 include_once "includes/funciones/validar_sesion.php";
-require_once ("includes/funciones/BD_conexion.php");
+include_once "includes/templates/header_secundario.php";
+
+    $id = $_SESSION['id'];
+    try{
+        require_once("includes/funciones/BD_conexion.php");
+        $sql = "SELECT id, nombre_estado FROM estado ORDER BY nombre_estado ASC";
+        $resultado_estados = $conn->query($sql);
+        $conn->close();
+
+    }catch (\Exception $e){
+        echo $e->getMessage();
+    }
 ?>
-<form class="formulario" action="" method="post">
-<fieldset class="direccion">
+
+<div class="alert alert-danger" role="alert">
+   <?php echo $_REQUEST['mensaje']?>
+</div>
+
+<form class="formulario" action="agregar_direccion.php" method="post">
+    <fieldset class="direccion">
         <legend>Direcciones de Envio</legend>
           
             <div class="form-group"> 
@@ -23,28 +39,36 @@ fin;
                 </select>
             </div>
        
-        <div class="form-group"> 
-            <label for="municipio">Municipio</label>
-            <select class="form-control form-control-sm" name="municipio" id="municipio">
+            <label for="municipio_id">Municipio</label>
+            <select  name="municipio_id" id="municipio_id" required>
             <option value="" selected disabled>-Seleccionar-</option>
             <option value=""></option>
             </select>
-        </div>
 
-            <label for="calle">Calle</label>
-            <input type="text" id="calle" placeholder="Ingrese su calle">
+            <div class="contenedor domicilio">
+                <div class="contenedor">
+                    <label for="calle">Calle</label>
+                    <input type="text" id="calle" placeholder="Ingrese su calle" name="calle" required>
+                </div>
+                
+                <div class="contenedor">
+                    <label for="no_ext">No. Exterior</label>
+                    <input type="text" id="no_ext" placeholder="No." name="no_ext" required>
+                </div>
             
-            <label for="no.Int">No. Interior</label>
-            <input type="text" id="no.Int" placeholder="Ingrese su no.Int">
-           
-            <label for="no.Ext">No. Exterior</label>
-            <input type="text" id="no.Ext" placeholder="Ingrese su no.Exte">
-            
-            <label for="codigo postal">Codigo Postal</label>
-            <input type="text" id="codigo postal" placeholder="Ingrese su Nombre">
+                <div class="contenedor">
+                    <label for="no_int">No. Interior</label>
+                    <input type="text" id="no_int" placeholder="S/N" name="no_int">
+                </div>
+
+                <div class="contenedor">
+                <label for="cp">Codigo Postal</label>
+            <input type="text" id="cp" placeholder="52000" name="cp" required>
+                </div>
+            </div>
         </fieldset>
         <div class="agregar-direccion contenedor">
-            <input type="submit"  value="Agregar Direccion de Envio" class="boton boton-azul-cielo">
+            <input type="submit"  value="Agregar Direccion de Envio" class="boton boton-azul-cielo" name="submit">
         </div>
 </form>
 <script src="js/jquery-3.5.1.min.js"></script>

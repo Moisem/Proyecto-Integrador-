@@ -1,4 +1,7 @@
-<?php include_once "includes/templates/header_secundario.php";?>
+<?php
+include_once "includes/funciones/validar_sesion.php";
+include_once "includes/templates/header.php";
+?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">

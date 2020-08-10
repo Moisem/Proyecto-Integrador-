@@ -1,4 +1,4 @@
-<?php include_once "includes/templates/header_secundario.php";?>
+<?php include_once "includes/templates/header_terciario.php";?>
     <?php
         try{
             require_once("includes/funciones/BD_conexion.php");
@@ -32,9 +32,9 @@
                             <p>Perifericos: <?php echo $Equipo['perifericos'];?></p>
                             <h3 class="precio">$<?php echo $Equipo['costo'];?></h3>
                             <form action="pedido.php" method="post">
-                                <input type="text" name="id" id="id" value="<?php echo $Equipo['id'];?>">
-                                <input type="text" name="nombre" id="nombre" value="<?php echo $Equipo['modelo'];?>">
-                                <input type="text" name="costo" id="costo" value="<?php echo $Equipo['costo'];?>">
+                                <input type="hidden" name="id" id="id" value="<?php echo $Equipo['id'];?>">
+                                <input type="hidden" name="nombre" id="nombre" value="<?php echo $Equipo['modelo'];?>">
+                                <input type="hidden" name="costo" id="costo" value="<?php echo $Equipo['costo'];?>">
                                 <input type="submit" value="Rentar" class="boton boton-azul DBlock" name="boton_rentar">
                             </form>
                         </div>

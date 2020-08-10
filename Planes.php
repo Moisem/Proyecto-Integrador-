@@ -1,4 +1,4 @@
-<?php include_once "includes/templates/header.php";?>
+<?php include_once "includes/templates/header_terciario.php";?>
 
    <main class="contenedor">
        <div class="contenedor-planes">
@@ -17,9 +17,9 @@
                     </div>
                 <h3 class="precio">Desde $439/mes</h3>
                 <form action="pedido.php" method="post">
-                    <input type="text" name="id" id="id" value="1">
-                    <input type="text" name="nombre" id="nombre" value="Hogar">
-                    <input type="text" name="costo" id="costo" value="439">
+                    <input type="hidden" name="id" id="id" value="1">
+                    <input type="hidden" name="nombre" id="nombre" value="Plan Hogar">
+                    <input type="hidden" name="costo" id="costo" value="439">
                     <input type="submit" value="Rentar" class="boton boton-azul DBlock" name="boton_rentar">
                 </form>
             </div>
@@ -40,9 +40,9 @@
                     </div>
                 <h3 class="precio">Desde 1500/mes</h3>
                 <form action="pedido.php" method="post">
-                    <input type="text" name="id" id="id" value="2">
-                    <input type="text" name="nombre" id="nombre" value="Gaming">
-                    <input type="text" name="costo" id="costo" value="1500">
+                    <input type="hidden" name="id" id="id" value="2">
+                    <input type="hidden" name="nombre" id="nombre" value="Plan Gaming">
+                    <input type="hidden" name="costo" id="costo" value="1500">
                     <input type="submit" value="Rentar" class="boton boton-azul DBlock" name="boton_rentar">
                 </form>
             </div>
@@ -63,9 +63,9 @@
                     </div>
                 <h3 class="precio">Desde $5000/mes</h3>
                 <form action="pedido.php" method="post">
-                    <input type="text" name="id" id="id" value="3">
-                    <input type="text" name="nombre" id="nombre" value="Empresarial">
-                    <input type="text" name="costo" id="costo" value="5000">
+                    <input type="hidden" name="id" id="id" value="3">
+                    <input type="hidden" name="nombre" id="nombre" value="Plan Empresarial">
+                    <input type="hidden" name="costo" id="costo" value="5000">
                     <input type="submit" value="Rentar" class="boton boton-azul DBlock" name="boton_rentar">
                 </form>
             </div>

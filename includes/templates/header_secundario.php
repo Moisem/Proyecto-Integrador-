@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/bootstrap_css/bootstrap.min.css">
         <link rel="stylesheet" href="css/iconos.css">
         <link rel="stylesheet" href="css/normalice.css">
         <link rel="stylesheet" href="css/estilos.css">
@@ -29,7 +30,6 @@
                 <div class="navegacion-usuario menu navegacion">
                     <a href="area_de_clientes.php" class="icon-user">Area de Clientes</a>
                     <?php 
-                        session_start();
                         if(empty($_SESSION['id'])){
                             echo "<a href='inicio_sesion.php' class='boton-registrate'>Ingresar</a>";  
                         }
