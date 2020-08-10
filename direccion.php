@@ -12,11 +12,11 @@ require_once ("includes/funciones/BD_conexion.php");
                     <option value="" selected disabled>-Seleccionar-</option>
                     <option value="" name="estado" ></option>
                     <?php
-                $sql = 'select id, estado from estado order by estado asc';
-                foreach ($conexion->query($sql) as $ ) {
+                $sql = 'select id, estado from estados order by estado asc';
+                foreach ($conexion ->query($sql) as $) {
                 echo <<<fin
 
-                <option value="{$ ['id']}">{$ ['nombre']}</option>
+                <option value="{$ ['id']}">{$ ['estado']}</option>
 fin;
                 }
                 ?>
@@ -28,15 +28,6 @@ fin;
             <select class="form-control form-control-sm" name="municipio" id="municipio">
             <option value="" selected disabled>-Seleccionar-</option>
             <option value=""></option>
-            <?php
-                $sql = 'select id, municipio from municipio order by municipio asc';
-                foreach ($conexion->query($sql) as $) {
-                echo <<<fin
-
-                <option value="{$['id']}">{$['municipio']}</option>
-fin;
-                }
-                ?>
             </select>
         </div>
 
@@ -56,5 +47,13 @@ fin;
             <input type="submit"  value="Agregar Direccion de Envio" class="boton boton-azul-cielo">
         </div>
 </form>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+$(function(e) {
+    $('#estado').change(function (e) {
+        console.log($(this).val())
+    })
+})
+</script>
 </body>
 </html>
