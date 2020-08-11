@@ -45,7 +45,7 @@ if(isset($_POST['iniciar'])){
             $_SESSION['nombre'] = $cliente['nombre'];
             $_SESSION['apellido_paterno'] = $cliente['apellido_paterno'];
             $_SESSION['rango'] = $cliente['rango'];
-            header('Location: index.php');
+            header('Location: editor_de_equipos.php');
         }
         catch (Exception $e){
             $error = $e->getMessage();
