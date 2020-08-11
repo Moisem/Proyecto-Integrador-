@@ -42,16 +42,13 @@
                     echo $e->getMessage();
                 }
                 ?>
-                <?php
-            if (isset($_GET['info']) && !empty($_GET['info'])) {
+                 <?php
+            if (isset($_GET['info']) && !empty($_GET['info'])) { 
                 $_GET['info'] = htmlentities($_GET['info']);
-                echo <<<fin
-
-            <div class="alert alert-warning" role"alert">
-                {$_GET['info']}
-            </div>
-            fin;                      
-            }
+            echo '<div class="alert alert-warning" role"alert">';
+                echo $_GET['info'];
+            echo'</div>';              
+             }
             ?>
                 <ul class="encabezado_pedidos">
                     <li>Fecha de contratacion</li>

@@ -25,15 +25,12 @@
     <a href="../index.php"><b>Abysmal</b>Edge</a>
   </div>
   <?php
-            if (isset($_GET['info']) && !empty($_GET['info'])) {
+            if (isset($_GET['info']) && !empty($_GET['info'])) { 
                 $_GET['info'] = htmlentities($_GET['info']);
-                echo <<<fin
-
-            <div class="alert alert-warning" role"alert">
-                {$_GET['info']}
-            </div>
-            fin;                      
-            }
+            echo '<div class="alert alert-warning" role"alert">';
+                echo $_GET['info'];
+            echo'</div>';              
+             }
             ?>
   <!-- /.login-logo -->
   <div class="card">

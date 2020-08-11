@@ -14,16 +14,13 @@ include_once "includes/templates/header_secundario.php";
     }
 ?>
 
-            <?php 
-            if (isset($_GET['info']) && !empty($_GET['info'])) {
+<?php
+            if (isset($_GET['info']) && !empty($_GET['info'])) { 
                 $_GET['info'] = htmlentities($_GET['info']);
-                echo <<<fin
-
-            <div class="alert alert-warning" role"alert">
-                {$_GET['info']}
-            </div>
-            fin;                      
-            }
+            echo '<div class="alert alert-warning" role"alert">';
+                echo $_GET['info'];
+            echo'</div>';              
+             }
             ?>
 
 <form class="formulario" action="agregar_direccion.php" method="post">

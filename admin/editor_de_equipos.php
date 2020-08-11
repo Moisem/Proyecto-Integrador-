@@ -34,6 +34,14 @@
     <section class="content">
 
     <div class="card-body">
+    <?php
+            if (isset($_GET['info']) && !empty($_GET['info'])) { 
+                $_GET['info'] = htmlentities($_GET['info']);
+            echo '<div class="alert alert-warning" role"alert">';
+                echo $_GET['info'];
+            echo'</div>';              
+             }
+            ?>
       <table id="example2" class="table table-bordered table-hover">
         <thead>
           <tr>

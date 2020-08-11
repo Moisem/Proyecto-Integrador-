@@ -23,8 +23,7 @@
             rango
             from cliente where
             correo = ? limit 1");
-            $stmt->bind_param(
-            "s",
+            $stmt->bind_param("s",
             $correo);
             $stmt->execute();
             $resultado = $stmt->get_result();
@@ -54,16 +53,13 @@
 ?>
 
 <main class="contenedor">
-    <?php
-if (isset($_GET['info']) && !empty($_GET['info'])) {
+<?php
+            if (isset($_GET['info']) && !empty($_GET['info'])) { 
                 $_GET['info'] = htmlentities($_GET['info']);
-                echo <<<fin
-
-            <div class="alert alert-warning" role"alert">
-                {$_GET['info']}
-            </div>
-            fin;                      
-            }
+            echo '<div class="alert alert-warning" role"alert">';
+                echo $_GET['info'];
+            echo'</div>';              
+             }
             ?>
     <form class="formulario" action="<?php echo  htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
         <h2 class="FW-900 centrar-texto">Inicia Sesion Para Continuar</h2>
