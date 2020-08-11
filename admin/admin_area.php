@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +31,7 @@
 
       <form action="inicio_sesion.php" method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="correo">
+          <input type="email" class="form-control" placeholder="correo" name="correo" required>
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -38,7 +39,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Contraseña">
+          <input type="password" class="form-control" placeholder="Contraseña" required name="contrasena">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -48,7 +49,7 @@
         <div class="row">
           <!-- /.col -->
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesion</button>
+            <button type="submit" class="btn btn-primary btn-block" value="iniciar" name="iniciar">Iniciar Sesion</button>
           </div>
           <!-- /.col -->
         </div>

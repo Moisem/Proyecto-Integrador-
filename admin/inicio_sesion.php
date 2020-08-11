@@ -1,8 +1,5 @@
-<?php include_once "includes/templates/header_secundario.php";?>
-
-<?php 
-    if(isset($_POST['submit'])){
-        $resultado =$_POST;
+<?php
+if(isset($_POST['iniciar'])){
         $correo = $_POST['correo'];
         $contrasena = $_POST['contrasena'];
         if(! (filter_has_var(INPUT_POST, 'correo') &&
@@ -14,7 +11,7 @@
             echo "<h3 class='error'>Debes ingresar una contraseña<h3>";
             }
         try{
-            require_once("includes/funciones/BD_conexion.php");
+            require_once("../includes/funciones/BD_conexion.php");
             $stmt = $conn->prepare("select 
             id, 
             nombre, 
@@ -22,7 +19,8 @@
             contrasena,
             rango
             from cliente where
-            correo = ? limit 1");
+            correo = ? and 
+            rango = 'Admin' limit 1");
             $stmt->bind_param(
             "s",
             $correo);
@@ -54,25 +52,3 @@
         }
     }
 ?>
-
-<main class="contenedor">
-    <form class="formulario" action="<?php echo  htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
-        <h2 class="FW-900 centrar-texto">Inicia Sesion Para Continuar</h2>
-        <fieldset>
-        <legend >Ingresar</legend>
-        
-            <label for="email">Email</label>
-            <input type="email" id="email" name="correo" placeholder="Ingrese su email">
-
-            <label for="contraseña">Contraseña</label>
-            <input type="password" name="contrasena" id="contraseña" placeholder="Ingrese su contraseña"> 
-        
-        </fieldset>
-        <div class="contendor centrar-texto iniciar_sesion">
-            <input type="submit" value="Iniciar Sesión" class="boton boton-azul-cielo" name="submit">
-            <p>¿No tienes una cuenta? <a href="registro.php" class="IS">Crear una Cuenta</a></p>     
-        </div>
-        </form>
-</main>
-</body>
-</html>

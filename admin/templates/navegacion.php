@@ -2,7 +2,7 @@
   
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="admin_area.php" class="brand-link">
+    <a href="../index.php" class="brand-link">
       <img src="../img/Logo.png"
            alt="Logo"
            class="brand-image img-circle elevation-3"
@@ -17,7 +17,7 @@
         <div class="image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Nombre_admin</a>
+          <a href="#" class="d-block"><?php echo $_SESSION['nombre']." ".$_SESSION['apellido_paterno']?></a>
         </div>
       </div>
 

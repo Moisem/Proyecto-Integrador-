@@ -1,4 +1,5 @@
 <?php
+include_once "templates/validar_sesion.php";
         $modelo = $_POST['modelo'];
         $costo = $_POST['costo'];
         $cpu = $_POST['cpu'];
@@ -55,18 +56,18 @@
         try{
             require_once("../includes/funciones/BD_conexion.php");
             $stmt = $conn->prepare("update equipo set 
-            modelo = '?', 
-            costo = '?', 
-            cpu = '?', 
-            ram = '?', 
-            grafica = '?', 
-            resolucion = '?', 
-            perifericos = '?', 
-            tipo = '?', 
-            estado = '?', 
-            gamma = '?',
-            imagen = '?' where 
-            id = '?' "); 
+            modelo = ?, 
+            costo = ?, 
+            cpu = ?, 
+            ram = ?, 
+            grafica = ?, 
+            resolucion = ?, 
+            perifericos = ?, 
+            tipo = ?, 
+            estado = ?, 
+            gamma = ?,
+            imagen = ? where 
+            id = ?"); 
             $stmt->bind_param("ssssssssssss", 
             $modelo, 
             $costo, 

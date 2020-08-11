@@ -1,4 +1,5 @@
 <?php
+    include_once "templates/validar_sesion.php";
     if(isset($_POST['agregar'])) {
         $correo = $_POST['correo'];
         try{
