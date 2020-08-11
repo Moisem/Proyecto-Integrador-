@@ -45,7 +45,7 @@
             $stmt->execute();
             $stmt->close();
             $conn->close();
-            header('location: area_de clientes.php?info=pedido guardado correctamente');
+            header('location: area_de clientes.php?info="pedido guardado correctamente"');
         }
         catch (Exception $e){
             $error = $e->getMessage();

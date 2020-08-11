@@ -7,11 +7,11 @@
         $contrasena = $_POST['contrasena'];
         if(! (filter_has_var(INPUT_POST, 'correo') &&
             (strlen(filter_input(INPUT_POST, 'correo')) >0 ))){
-                header('Location: inicio_sesion.php?info=debes ingresar un correo');
+                header('Location: inicio_sesion.php?info="debes ingresar un correo"');
             }
         if(! (filter_has_var(INPUT_POST, 'contrasena') &&
             (strlen(filter_input(INPUT_POST, 'contrasena')) >0 ))){
-                header('Location: inicio_sesion.php?info=debes ingresar una contraseña');
+                header('Location: inicio_sesion.php?info="debes ingresar una contraseña"');
             }
         try{
             require_once("includes/funciones/BD_conexion.php");
@@ -33,11 +33,11 @@
             $conn->close();
             /* Validar usuario */
             if(false == $cliente){
-                header('Location: inicio_sesion.php?info=cuenta inexistete');
+                header('Location: inicio_sesion.php?info="cuenta inexistete"');
             }
             /* Validar contraseña */
             if(!password_verify($_POST['contrasena'] , $cliente['contrasena'])){
-                header('Location: inicio_sesion.php?info=contraseña incorrecta');
+                header('Location: inicio_sesion.php?info="contraseña incorrecta"');
             }
             /* Iniciar Sesion */
             session_start();
