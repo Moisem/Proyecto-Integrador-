@@ -1,6 +1,16 @@
 <?php include_once "includes/templates/header_secundario.php";?>
 <main class="contenedor">
+            <?php
+            if (isset($_GET['info']) && !empty($_GET['info'])) {
+                $_GET['info'] = htmlentities($_GET['info']);
+                echo <<<fin
 
+            <div class="alert alert-warning" role"alert">
+                {$_GET['info']}
+            </div>
+            fin;                      
+            }
+            ?>
 <form class="formulario" action="validar_registro.php" method="post">
     <h2 class="FW-900 centrar-texto">Crea una Nueva Cuenta en Abysmal Edge</h2>
         <fieldset>

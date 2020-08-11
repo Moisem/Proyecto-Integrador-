@@ -45,16 +45,7 @@
             $stmt->execute();
             $stmt->close();
             $conn->close();
-            echo "id =".$id."<br>"; 
-            echo "fecha de inicio =".$fecha_inicio."<br>"; 
-            echo "fecha de final =".$fecha_fin."<br>";
-            echo "estatus =".$estatus."<br>";
-            echo "total =".$subtotal."<br>"; 
-            echo "ID de Plan =".$renta_id."<br>";
-            echo "ID de equipo =".$equipo_id."<br>";
-            echo "ID de cliente =".$cliente_id."<br>";
-            echo "ID de cliente =".$direccion_id."<br>";
-            echo "hecho";
+            header('location: area_de clientes.php?info=pedido guardado correctamente');
         }
         catch (Exception $e){
             $error = $e->getMessage();

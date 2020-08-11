@@ -33,7 +33,7 @@ include_once "includes/funciones/validar_sesion.php";
             $stmt->execute();
             $stmt->close();
             $conn->close();
-        header('location: direccion.php?mensaje="Direccion agregada correctamente"');
+        header('location: direccion.php?info="Direccion agregada correctamente"');
         }
         catch (Exception $e){
             $error = $e->getMessage();

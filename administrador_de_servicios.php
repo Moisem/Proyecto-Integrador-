@@ -42,6 +42,17 @@
                     echo $e->getMessage();
                 }
                 ?>
+                <?php
+            if (isset($_GET['info']) && !empty($_GET['info'])) {
+                $_GET['info'] = htmlentities($_GET['info']);
+                echo <<<fin
+
+            <div class="alert alert-warning" role"alert">
+                {$_GET['info']}
+            </div>
+            fin;                      
+            }
+            ?>
                 <ul class="encabezado_pedidos">
                     <li>Fecha de contratacion</li>
                     <li>Fecha de finalizacion</li>
@@ -69,9 +80,6 @@
                                 }
                             }
                     ?>
-            <div class="alert alert-danger" role="alert">
-                A simple danger alert—check it out!
-            </div>
         </div>
     </div>
     <?php include_once 'includes/templates/scrips.php'?>

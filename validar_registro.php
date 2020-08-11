@@ -13,44 +13,44 @@
         $pregunta_3 = password_hash($_POST['pregunta_3'],PASSWORD_BCRYPT,['cost' => 12 ]);
         if(! (filter_has_var(INPUT_POST, 'nombre') &&
         (strlen(filter_input(INPUT_POST, 'nombre')) >0 ))){
-         echo "<h3 class='error'>Ingresa un nombre<h3>";
+         header('location: direccion.php?info=Debes ingresar un nombre');
         }
         if(! (filter_has_var(INPUT_POST, 'ap_materno') &&
         (strlen(filter_input(INPUT_POST, 'ap_materno')) >0 ))){
-            echo "<h3 class='error'>Los Apellidos son obligatorios<h3>";
+            header('location: direccion.php?info=Debes ingresar tus apellidos');
         }
         if(! (filter_has_var(INPUT_POST, 'ap_paterno') &&
         (strlen(filter_input(INPUT_POST, 'ap_paterno')) >0 ))){
-            echo "<h3 class='error'>Los Apellidos son obligatorios<h3>";
+            header('location: direccion.php?info=Debes ingresar tus apellidos');
         }
         if(! (filter_has_var(INPUT_POST, 'correo') &&
         (strlen(filter_input(INPUT_POST, 'correo')) >0 ))){
-         echo "<h3 class='error'>El correo electronico es necesario<h3>";
+            header('location: direccion.php?info=Debes ingresar tu correo electronico');
         }
         if(! (filter_has_var(INPUT_POST, 'contrasena') &&
         (strlen(filter_input(INPUT_POST, 'contrasena')) >0 ))){
-            echo "<h3 class='error'>La contraseña no es valida<h3>";
+            header('location: direccion.php?info=contraseña invalida');
         }
         if(! (filter_has_var(INPUT_POST, 'confirmarcontrasena') &&
         (strlen(filter_input(INPUT_POST, 'confirmarcontrasena')) >0 ))){
-            echo "<h3 class='error'>Necesitas Confirmar tu Contraseña<h3>";
+            header('location: direccion.php?info=contraseña invalida');
         }
         if(! (filter_has_var(INPUT_POST, 'telefono') &&
         (strlen(filter_input(INPUT_POST, 'telefono')) >0 ))){
-         echo "<h3 class='error'>Necesitamos un numero de contacto<h3>";
+            header('location: direccion.php?info=necesitamos tu numero de contacto');
         }
         if(! (filter_has_var(INPUT_POST, 'pregunta_1') &&
         (strlen(filter_input(INPUT_POST, 'pregunta_1')) >0 ))){
-         echo "<h3 class='error'>Las preguntas de seguridad son necesarias<h3>";
+            header('location: direccion.php?info=las preguntas de seguridad son necesarias');
         }
         if(! (filter_has_var(INPUT_POST, 'pregunta_2') &&
         (strlen(filter_input(INPUT_POST, 'pregunta_2')) >0 ))){
-         echo "<h3 class='error'>Las preguntas de seguridad son necesarias<h3>";
+            header('location: direccion.php?info=las preguntas de seguridad son necesarias');
         }
         echo '<p>¿No tienes una cuenta? <a href="registro.php" class="IS">Crear una Cuenta</a></p>';
         if(! (filter_has_var(INPUT_POST, 'pregunta_2') &&
         (strlen(filter_input(INPUT_POST, 'pregunta_2')) >0 ))){
-         echo "<h3 class='error'>Las preguntas de seguridad son necesarias<h3>";
+            header('location: direccion.php?info=las preguntas de seguridad son necesarias');
         }
         try{
             require_once("includes/funciones/BD_conexion.php");

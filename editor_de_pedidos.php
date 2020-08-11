@@ -12,8 +12,7 @@ $fecha_actual = date("Y-m-d");
 
 if(isset($_POST['cancelar'])){
     if($fecha_actual >= $fecha_inicio){
-        echo "solo se pueden cancelar pedidos no entregados";
-        exit;
+        header('location: administrador_de_servicios.php?info=Solo se pueden cancelar pedidos antes de ser entregados');
     }else{?>
         <div class="contenedor contenedor-pedido">
             <form class="formulario_pedido centrar-texto" action="eliminar_pedido.php" method="post">
@@ -45,8 +44,7 @@ if(isset($_POST['cancelar'])){
     }
 if(isset($_POST['editar'])){
     if($fecha_actual >= $fecha_inicio){
-        echo "solo se pueden editar pedidos no entregados";
-        exit;
+        header('location: administrador_de_servicios.php?info=Solo se pueden cancelar pedidos antes de ser entregados');
     }else{?>
     
     <div class="contenedor contenedor-pedido">

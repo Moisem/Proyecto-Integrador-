@@ -7,11 +7,11 @@
         $contrasena = $_POST['contrasena'];
         if(! (filter_has_var(INPUT_POST, 'correo') &&
             (strlen(filter_input(INPUT_POST, 'correo')) >0 ))){
-         echo "<h3 class='error'>No has ingresado una direccion de correo electronico<h3>";
+                header('Location: inicio_sesion.php?info=debes ingresar un correo');
             }
         if(! (filter_has_var(INPUT_POST, 'contrasena') &&
             (strlen(filter_input(INPUT_POST, 'contrasena')) >0 ))){
-            echo "<h3 class='error'>Debes ingresar una contraseña<h3>";
+                header('Location: inicio_sesion.php?info=debes ingresar una contraseña');
             }
         try{
             require_once("includes/funciones/BD_conexion.php");
@@ -33,13 +33,11 @@
             $conn->close();
             /* Validar usuario */
             if(false == $cliente){
-                echo "<h3 class='error contenedor titulo centrar-texto'>Correo inexistente</h3>";
-                exit;
+                header('Location: inicio_sesion.php?info=cuenta inexistete');
             }
             /* Validar contraseña */
             if(!password_verify($_POST['contrasena'] , $cliente['contrasena'])){
-                echo "<h3 class='error contenedor titulo centrar-texto'>Contraseña incorrecta</h3>";
-                exit;
+                header('Location: inicio_sesion.php?info=contraseña incorrecta');
             }
             /* Iniciar Sesion */
             session_start();
@@ -56,6 +54,17 @@
 ?>
 
 <main class="contenedor">
+    <?php
+if (isset($_GET['info']) && !empty($_GET['info'])) {
+                $_GET['info'] = htmlentities($_GET['info']);
+                echo <<<fin
+
+            <div class="alert alert-warning" role"alert">
+                {$_GET['info']}
+            </div>
+            fin;                      
+            }
+            ?>
     <form class="formulario" action="<?php echo  htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
         <h2 class="FW-900 centrar-texto">Inicia Sesion Para Continuar</h2>
         <fieldset>

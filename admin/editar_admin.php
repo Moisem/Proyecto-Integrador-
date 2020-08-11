@@ -10,7 +10,7 @@
             $stmt->execute();
             $stmt->close();
             $conn->close();
-            header('location: agregar_administrador.php');
+            header('location: agregar_administrador.php?info="administrador creado correctamente"');
         }
         catch (Exception $e){
             $error = $e->getMessage();
@@ -25,7 +25,7 @@
             $stmt->execute();
             $stmt->close();
             $conn->close();
-            header('location: agregar_administrador.php');
+            header('location: agregar_administrador.php=info="administrador eliminado correctamente"');
         }
         catch (Exception $e){
             $error = $e->getMessage();

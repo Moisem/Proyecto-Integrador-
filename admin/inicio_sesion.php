@@ -4,11 +4,11 @@ if(isset($_POST['iniciar'])){
         $contrasena = $_POST['contrasena'];
         if(! (filter_has_var(INPUT_POST, 'correo') &&
             (strlen(filter_input(INPUT_POST, 'correo')) >0 ))){
-         echo "<h3 class='error'>No has ingresado una direccion de correo electronico<h3>";
+                header('Location: inicio_sesion.php?info="No tienes acceso a esta area"');
             }
         if(! (filter_has_var(INPUT_POST, 'contrasena') &&
             (strlen(filter_input(INPUT_POST, 'contrasena')) >0 ))){
-            echo "<h3 class='error'>Debes ingresar una contraseña<h3>";
+                header('Location: inicio_sesion.php?info="ingresa una contraseña"');
             }
         try{
             require_once("../includes/funciones/BD_conexion.php");
@@ -31,13 +31,11 @@ if(isset($_POST['iniciar'])){
             $conn->close();
             /* Validar usuario */
             if(false == $cliente){
-                echo "<h3 class='error contenedor titulo centrar-texto'>Correo inexistente</h3>";
-                exit;
+                header('Location: inicio_sesion.php?info="No tienes acceso a esta area"');
             }
             /* Validar contraseña */
             if(!password_verify($_POST['contrasena'] , $cliente['contrasena'])){
-                echo "<h3 class='error contenedor titulo centrar-texto'>Contraseña incorrecta</h3>";
-                exit;
+                header('Location: inicio_sesion.php?info="Contraseña incorrecta"');
             }
             /* Iniciar Sesion */
             session_start();
@@ -45,7 +43,7 @@ if(isset($_POST['iniciar'])){
             $_SESSION['nombre'] = $cliente['nombre'];
             $_SESSION['apellido_paterno'] = $cliente['apellido_paterno'];
             $_SESSION['rango'] = $cliente['rango'];
-            header('Location: editor_de_equipos.php');
+            header('Location: editor_de_equipos.php?info="Sesion iniciada correctamente!"');
         }
         catch (Exception $e){
             $error = $e->getMessage();

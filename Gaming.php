@@ -20,7 +20,7 @@
         foreach($ListaEquipos as $Equipo){
             if($Equipo['gamma'] == "GAMING"){?>
                 <div class="plan-gaming">
-                    <img src="img/lap_gamer_1.jpg" alt="Adquiere Equipos">
+                    <img src="<?php echo $Equipo['imagen']?>" alt="Adquiere Equipos">
                     <div class="contenido-plan">
                         <div class="descripcion-plan-gaming">
                         <h2><?php echo $Equipo['modelo'];?></h2>
