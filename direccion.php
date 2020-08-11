@@ -22,27 +22,19 @@ include_once "includes/templates/header_secundario.php";
     <fieldset class="direccion">
         <legend>Direcciones de Envio</legend>
           
-            <div class="form-group"> 
-                <label for="estado">Estado</label>
-                <select class="form-control form-control-sm" id="estado">
-                    <option value="" selected disabled>-Seleccionar-</option>
-                    <option value="" name="estado" ></option>
-                    <?php
-                $sql = 'select id, estado from estados order by estado asc';
-                foreach ($conexion ->query($sql) as $) {
-                echo <<<fin
-
-                <option value="{$ ['id']}">{$ ['estado']}</option>
-fin;
-                }
-                ?>
-                </select>
-            </div>
+            <label for="estado_id">Estado</label>
+            <select name="estado_id" id="estado_id" required>
+                <option value="" selected disabled>-Seleccionar-</option>
+                <?php while($estado = $resultado_estados->fetch_assoc()){ ?>
+                    <option value="<?php echo $estado['id']?>">
+                    <?php echo $estado['nombre_estado']?>
+                    </option>
+                <?php } ?> 
+            </select>
        
             <label for="municipio_id">Municipio</label>
             <select  name="municipio_id" id="municipio_id" required>
             <option value="" selected disabled>-Seleccionar-</option>
-            <option value=""></option>
             </select>
 
             <div class="contenedor domicilio">
@@ -71,13 +63,13 @@ fin;
             <input type="submit"  value="Agregar Direccion de Envio" class="boton boton-azul-cielo" name="submit">
         </div>
 </form>
-<script src="js/jquery-3.5.1.min.js"></script>
+<?php include_once 'includes/templates/scrips.php';?>
 <script>
-$(function(e) {
-    $('#estado').change(function (e) {
-        console.log($(this).val())
+    $(function(e) {
+        $('#estado_id').change(function (e) {
+            $('#municipio_id').load('includes/templates/municipios.php?estado_id='+$(this).val());
+        })
     })
-})
 </script>
 </body>
 </html>
