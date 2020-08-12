@@ -15,17 +15,19 @@ if(isset($_POST['cancelar'])){
         header('location: area_de_clientes.php?info="Solo se pueden cancelar pedidos antes de ser entregados"');
     }else{?>
         <div class="contenedor contenedor-pedido">
-            <form class="formulario_pedido centrar-texto" action="eliminar_pedido.php" method="post">
+            <form class="formulario_pedido centrar-texto" action="editar_pedido.php" method="post">
                 <fieldset>
                     <legend>Datos de Orden</legend>
 
                     <input id="id" type="hidden" name="id" value="<?php echo $id;?>">            
     
                     <label for="fecha_inicio" class="">Fecha estimada de entrega</label> 
-                    <p><?php echo $fecha_inicio;?></p>   
+                    <p><?php echo $fecha_inicio;?></p>  
+                    <input id="id" type="hidden" name="id" value="<?php echo $fecha_inicio;?>">  
 
                     <label for="fecha_final" class="">Tu Servicio vencerá el dia:</label>
                     <p><?php echo $fecha_fin;?></p>    
+                    <input id="id" type="hidden" name="id" value="<?php echo $fecha_fin;?>"> 
 
                     <label for="persona_que_recibe" class="">Nombre de quien recibirá el equipo</label>
                     <p><?php echo $_SESSION['nombre']." ".$_SESSION['apellido_paterno'];?></p> 
@@ -34,7 +36,7 @@ if(isset($_POST['cancelar'])){
                     <p class="precio centrar-texto">$<?php echo $costo?></p>
                 </fieldset>
                 <div class="contendor centrar-texto" id="contenedor-botones">
-                    <input type="submit" value="Cancelar Pedido" class="boton boton-rojo" name="submit">
+                    <input type="submit" value="Cancelar Pedido" class="boton boton-rojo" name="eliminar">
                 </div>
             </form>
         </div>
@@ -48,7 +50,7 @@ if(isset($_POST['editar'])){
     }else{?>
     
     <div class="contenedor contenedor-pedido">
-            <form class="formulario_pedido centrar-texto" action="confirmar_pedido.php" method="post">
+            <form class="formulario_pedido centrar-texto" action="editar_pedido.php" method="post">
                 <fieldset>
                     <legend>Datos de Orden</legend>
 
@@ -74,7 +76,7 @@ if(isset($_POST['editar'])){
                     <input id="id_renta" type="hidden" name="id_renta" value="<?php echo $id_renta;?>">
                 </fieldset>
                 <div class="contendor centrar-texto" id="contenedor-botones">
-                    <input type="submit" value="Guardar Cambios" class="boton boton-azul-cielo" name="submit">
+                    <input type="submit" value="Guardar Cambios" class="boton boton-azul-cielo" name="editar">
                 </div>
             </form>
         </div>

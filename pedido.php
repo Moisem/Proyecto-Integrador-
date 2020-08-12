@@ -43,8 +43,8 @@ include_once "includes/templates/header_terciario.php";
                     <legend>Datos de Orden</legend>
 
                     <label for="fecha_de_requisicion" class="">Fecha de requisicion</label>
-                    <p class=""><?php echo $fecha_actual;?></p>   
-                    <input id="fecha_de_requisicion" type="hidden" name="fecha_de_requisicion" value="<?php echo $fecha_actual;?>">
+                    <p><?php echo $fecha_actual;?></p>
+                    <input class="centrar-texto" id="fecha_de_requisicion" type="hidden" name="fecha_de_requisicion" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" value="<?php echo $fecha_actual;?>" required>
 
                     <label for="fecha_inicio" class="">Fecha estimada de entrega</label> 
                     <p><?php echo $fecha_entrega;?></p>   

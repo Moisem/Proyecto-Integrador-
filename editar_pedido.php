@@ -1,0 +1,46 @@
+<?php
+    if(isset($_POST['eliminar'])){
+        $id = $_POST['id'];
+        try{
+            require_once("includes/funciones/BD_conexion.php");
+            $stmt = $conn->prepare("update detalle_renta 
+            estatus = 'CANCELADO' where 
+            id = ?");
+            $stmt->bind_param("s",
+            $id);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            $cliente = $resultado->fetch_assoc();
+            $stmt->close();
+            $conn->close();
+            header('Location: area_de_clientes.php?info="Pedido Cancelado Correctamente"');
+        }
+        catch (Exception $e){
+            $error = $e->getMessage();
+        }
+    }else{
+        $id = $_POST['id'];
+        $fecha_inicio = $_POST['fecha_inicio'];
+        $fecha_fin = $_POST['fecha_fin'];
+        try{
+            require_once("includes/funciones/BD_conexion.php");
+            $stmt = $conn->prepare("update detalle_renta 
+            fecha_inicio = ?, 
+            fecha_fin = ? where 
+            id = ?");
+            $stmt->bind_param("sss",
+            $fecha_inicio,
+            $fecha_fin,
+            $id);
+            $stmt->execute();
+            $resultado = $stmt->get_result();
+            $cliente = $resultado->fetch_assoc();
+            $stmt->close();
+            $conn->close();
+            header('Location: area_de_clientes.php?info="Pedido editado correctamente"');
+        }
+        catch (Exception $e){
+            $error = $e->getMessage();
+        }
+    }
+?>
