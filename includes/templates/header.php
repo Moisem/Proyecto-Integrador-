@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +26,10 @@
                     <a href="planes.php">Planes</a>
                     <a href="equipos.php">Equipos</a>
                     <a href="gaming.php">Gaming</a>
-                    <a href="contacto.php">Contacto</a>
                 </nav>
                 <div class="navegacion-usuario menu navegacion">
                     <a href="area_de_clientes.php" class="icon-user">Area de Clientes</a>
                     <?php
-                        session_start(); 
                         if(empty($_SESSION['id'])){
                             echo "<a href='inicio_sesion.php' class='boton-registrate'>Ingresar</a>";  
                         }

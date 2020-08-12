@@ -25,7 +25,6 @@
                     <a href="planes.php">Planes</a>
                     <a href="equipos.php">Equipos</a>
                     <a href="gaming.php">Gaming</a>
-                    <a href="contacto.php">Contacto</a>
                 </nav>
                 <div class="navegacion-usuario menu navegacion">
                     <a href="area_de_clientes.php" class="icon-user">Area de Clientes</a>

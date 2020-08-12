@@ -46,7 +46,7 @@ include_once "templates/validar_sesion.php";
             $stmt->execute();
             $stmt->close();
             $conn->close();
-            echo "creado";
+            header('location: editor_de_equipos.php?info="Equipo agregado correctamente"');
         }
         catch (Exception $e){
             $error = $e->getMessage();
@@ -84,7 +84,7 @@ include_once "templates/validar_sesion.php";
             $stmt->execute();
             $stmt->close();
             $conn->close();
-            echo "insertado";
+            header('location: editor_de_equipos.php?info="Equipo modificado correctamente"');
         }
         catch (Exception $e){
             $error = $e->getMessage();

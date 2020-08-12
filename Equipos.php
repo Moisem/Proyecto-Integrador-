@@ -2,7 +2,7 @@
     <?php
         try{
             require_once("includes/funciones/BD_conexion.php");
-            $stmt = $conn->prepare("select * from equipo");
+            $stmt = $conn->prepare(" select * from equipo ");
             $stmt->execute();
             $resultado = $stmt->get_result();
             $ListaEquipos = $resultado->fetch_all(MYSQLI_ASSOC);
