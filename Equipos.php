@@ -48,3 +48,6 @@
 <?php include_once "includes/templates/footer.php";?>
 </body>
 </html>
+<?php
+ob_end_flush();
+?>

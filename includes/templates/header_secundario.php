@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
     <head>
@@ -8,6 +11,7 @@
         <link rel="stylesheet" href="css/iconos.css">
         <link rel="stylesheet" href="css/normalice.css">
         <link rel="stylesheet" href="css/estilos.css">
+        <link  rel="icon" href="img/Logo.png" type="image/png">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Press+Start+2P&display=swap" rel="stylesheet">
         <title>Abysmal Edge</title>

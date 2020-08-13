@@ -84,3 +84,6 @@ include_once "includes/templates/header_terciario.php";
 </main>
 </body>
 </html>
+<?php
+ob_end_flush();
+?>

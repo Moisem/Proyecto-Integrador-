@@ -10,9 +10,9 @@
     $subtotal = $_POST['costo'];
     if($_POST['servicio'] == "Plan Hogar" || $_POST['servicio'] == "Plan Gaming" || $_POST['servicio'] == "Plan Empresarial" ){
         $renta_id = $_POST['id_renta'];
-        $equipo_id = "";
+        $equipo_id = NULL;
     }else{
-        $renta_id = "";
+        $renta_id = NULL;
         $equipo_id = $_POST['id_renta'];
     }
     $cliente_id = $_SESSION['id'];
@@ -20,19 +20,16 @@
     if(isset($_POST['submit'])){
         try{
             require_once("includes/funciones/BD_conexion.php");
-            $stmt = $conn->prepare("insert into detalle_renta (
-                id,
-                fecha_inicio, 
-                fecha_fin, 
-                estatus, 
-                subtotal,   
-                renta_id,
-                equipo_id,
-                cliente_id,
-                direccion_id
-                )
-                values 
-                ('',?,?,?,?,?,?,?,?)");
+            $stmt = $conn->prepare("INSERT INTO `detalle_renta` 
+            (`fecha_inicio`, 
+            `fecha_fin`, 
+            `estatus`, 
+            `subtotal`, 
+            `renta_id`, 
+            `equipo_id`, 
+            `cliente_id`, 
+            `direccion_id`) VALUES 
+            (?, ?, ?, ?, ?, ?, ?, ?);");
             $stmt->bind_param("ssssssss", 
             $fecha_inicio, 
             $fecha_fin, 
@@ -43,9 +40,16 @@
             $cliente_id,
             $direccion_id);
             $stmt->execute();
+            $count=$stmt->affected_rows;
+            $error=$stmt->error;
+            $errno=$stmt->errno;
+            if( $count >= 1 )
+                header('location: area_de_clientes.php?info="Pedido guardado correctamente"');;
+            else
+                echo "No se pudieron guardar los datos. --" . $error . "--. --" . $errno;
             $stmt->close();
             $conn->close();
-            header('location: area_de_clientes.php?info="pedido guardado correctamente"');
+            /*header('location:area_de_clientes.php?info="Pedido creado correctamente"');*/
         }
         catch (Exception $e){
             $error = $e->getMessage();

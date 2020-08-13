@@ -78,3 +78,6 @@ include_once "includes/templates/header_secundario.php";
 </script>
 </body>
 </html>
+<?php
+ob_end_flush();
+?>

@@ -10,19 +10,17 @@ include_once "includes/funciones/validar_sesion.php";
         $cp = $_POST['cp'];
         try{
             require_once("includes/funciones/BD_conexion.php");
-            $stmt = $conn->prepare("insert into direccion (
-                id, 
-                calle, 
-                no_ext, 
-                no_int, 
-                cp, 
-                estado_id,
-                municipio_id,
-                usuario_id
-                )
-                values 
-                ('',?,?,?,?,?,?,?)");
-            $stmt->bind_param("sssssss", 
+            $stmt = $conn->prepare("INSERT INTO `direccion` 
+            (`id`, 
+            `calle`, 
+            `no_ext`, 
+            `no_int`, 
+            `cp`, 
+            `estado_id`, 
+            `municipio_id`, 
+            `usuario_id`) VALUES 
+            (NULL, ?, ?, ?, ?, ?, ?, ?);");
+            $stmt->bind_param("sssssss",
             $calle, 
             $no_ext, 
             $no_int, 
@@ -33,7 +31,7 @@ include_once "includes/funciones/validar_sesion.php";
             $stmt->execute();
             $stmt->close();
             $conn->close();
-        header('location: direccion.php?info="Direccion agregada correctamente"');
+            header('location: direccion.php?info="Direccion agregada correctamente"');
         }
         catch (Exception $e){
             $error = $e->getMessage();
