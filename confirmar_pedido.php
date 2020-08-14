@@ -4,7 +4,7 @@
 ?>
     <?php
     $id= "";
-    $fecha_inicio = $_POST['fecha_de_requisicion'];
+    $fecha_inicio = $_POST['fecha_inicio'];
     $fecha_fin = $_POST['fecha_final'];
     $estatus = "ACTIVO";
     $subtotal = $_POST['costo'];
@@ -40,16 +40,9 @@
             $cliente_id,
             $direccion_id);
             $stmt->execute();
-            $count=$stmt->affected_rows;
-            $error=$stmt->error;
-            $errno=$stmt->errno;
-            if( $count >= 1 )
-                header('location: area_de_clientes.php?info="Pedido guardado correctamente"');;
-            else
-                echo "No se pudieron guardar los datos. --" . $error . "--. --" . $errno;
             $stmt->close();
             $conn->close();
-            /*header('location:area_de_clientes.php?info="Pedido creado correctamente"');*/
+            header('location:area_de_clientes.php?info="Pedido creado correctamente"');
         }
         catch (Exception $e){
             $error = $e->getMessage();

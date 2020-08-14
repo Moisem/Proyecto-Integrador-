@@ -56,7 +56,6 @@
                     <li>Estado</li>
                     <li>Costo</li>
                     <li></li>
-                    <li></li>
                 </ul>
                     <?php
                         foreach($cliente as $datos){
@@ -72,7 +71,7 @@
                                     }
                                 }
                                 echo "<li><input type='submit' style='color:white; border-radius:0.2rem;' value='cancelar' name='cancelar' class='boton-rojo'></li>";
-                                echo "<li><input type='submit' style='color:white; border-radius:0.2rem;' value='cambiar dia de entrega' name='editar' class='boton-verde'></li>";
+                                /*echo "<li><input type='submit' style='color:white; border-radius:0.2rem;' value='cambiar dia de entrega' name='editar' class='boton-verde'></li>";*/
                                 echo "</ul></form>";
                                 }
                             }

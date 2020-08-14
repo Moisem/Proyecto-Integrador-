@@ -15,8 +15,7 @@ include_once "templates/validar_sesion.php";
     if(isset($_POST['agregar'])) {
         try{
             require_once("../includes/funciones/BD_conexion.php");
-            $stmt = $conn->prepare("insert into equipo (
-                id, 
+            $stmt = $conn->prepare("insert into equipo ( 
                 modelo, 
                 costo, 
                 cpu, 
@@ -30,7 +29,7 @@ include_once "templates/validar_sesion.php";
                 imagen
                 )
                 values 
-                ('',?,?,?,?,?,?,?,?,?,?,?)");
+                (?,?,?,?,?,?,?,?,?,?,?)");
             $stmt->bind_param("sssssssssss", 
             $modelo, 
             $costo, 

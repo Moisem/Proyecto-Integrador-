@@ -3,16 +3,22 @@
         $id = $_POST['id'];
         try{
             require_once("includes/funciones/BD_conexion.php");
-            $stmt = $conn->prepare("update detalle_renta 
-            estatus = 'CANCELADO' where 
-            id = ?");
+            $stmt = $conn->prepare("UPDATE `detalle_renta` SET 
+            `estatus` = 'CANCELADO' WHERE 
+            `detalle_renta`.`id` = ?;");
             $stmt->bind_param("s",
             $id);
             $stmt->execute();
-            $resultado = $stmt->get_result();
-            $cliente = $resultado->fetch_assoc();
+            /*$count=$conn->affected_rows;
+            $error=$conn->error;
+            $errno=$conn->errno;*/
             $stmt->close();
             $conn->close();
+            /*if( $count >= 1 )
+                echo "Datos guardados<br />";
+                else
+                echo "No se pudieron guardar los datos. " . $error . ". " . $errno;
+                echo $id;*/
             header('Location: area_de_clientes.php?info="Pedido Cancelado Correctamente"');
         }
         catch (Exception $e){

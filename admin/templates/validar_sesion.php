@@ -4,6 +4,6 @@
         header('Location: admin_area.php');
     }
     if(empty($_SESSION['rango'])){
-        header('Location: admin_area.php?info="No tienes una cuenta de administrador"');
+        header('Location: admin_area.php?info="Debes tener una cuenta administrador"');
     }
 ?>

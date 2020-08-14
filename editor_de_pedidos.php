@@ -23,11 +23,11 @@ if(isset($_POST['cancelar'])){
     
                     <label for="fecha_inicio" class="">Fecha estimada de entrega</label> 
                     <p><?php echo $fecha_inicio;?></p>  
-                    <input id="id" type="hidden" name="id" value="<?php echo $fecha_inicio;?>">  
+                    <input id="fecha_inicio" type="hidden" name="fecha_inicio" value="<?php echo $fecha_inicio;?>">  
 
                     <label for="fecha_final" class="">Tu Servicio vencerá el dia:</label>
                     <p><?php echo $fecha_fin;?></p>    
-                    <input id="id" type="hidden" name="id" value="<?php echo $fecha_fin;?>"> 
+                    <input id="fecha_fin" type="hidden" name="fecha_fin" value="<?php echo $fecha_fin;?>"> 
 
                     <label for="persona_que_recibe" class="">Nombre de quien recibirá el equipo</label>
                     <p><?php echo $_SESSION['nombre']." ".$_SESSION['apellido_paterno'];?></p> 

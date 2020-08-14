@@ -20,14 +20,14 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Modelo</label>
-                        <input type="text" class="form-control" placeholder="Asus..." name="modelo">
+                        <input type="text" class="form-control" placeholder="Asus..." name="modelo" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Costo</label>
-                        <input type="number" class="form-control" placeholder="1564" name="costo">
+                        <input type="number" class="form-control" placeholder="1564" name="costo" required>
                       </div>
                     </div>
                   </div>
@@ -37,14 +37,14 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Perifericos</label>
-                        <input type="text" class="form-control" placeholder="Mouse Razer..." name="perifericos">
+                        <input type="text" class="form-control" placeholder="Mouse Razer..." name="perifericos" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Resolucion</label>
-                        <input type="text" class="form-control" placeholder='1080x720 14" 4k' name="resolucion">
+                        <input type="text" class="form-control" placeholder='1080x720 14" 4k' name="resolucion" required>
                       </div>
                     </div>
                   </div>
@@ -54,21 +54,21 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>CPU</label>
-                        <input type="text" class="form-control" placeholder="Intel..." name="cpu">
+                        <input type="text" class="form-control" placeholder="Intel..." name="cpu" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>GPU</label>
-                        <input type="text" class="form-control" placeholder="Nvidia..." name="grafica">
+                        <input type="text" class="form-control" placeholder="Nvidia..." name="grafica" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Ruta de imagen</label>
-                        <input type="text" class="form-control" placeholder="img/ejemplo.jpg" name="imagen">
+                        <input type="text" class="form-control" placeholder="img/ejemplo.jpg" name="imagen" required>
                       </div>
                     </div>
                   </div>
@@ -78,7 +78,7 @@
                       <!-- select -->
                       <div class="form-group">
                         <label>RAM</label>
-                        <select class="form-control" name="ram">
+                        <select class="form-control" name="ram" required>
                           <option disabled selected>-Seleccionar-</option>
                           <option value ="2GB RAM">2GB RAM</option>
                           <option value ="4GB RAM">4GB RAM</option>
@@ -93,7 +93,7 @@
                       <!-- select -->
                       <div class="form-group">
                         <label>Tipo</label>
-                         <select class="form-control" name="tipo">
+                         <select class="form-control" name="tipo" required>
                           <option disabled selected>-Seleccionar-</option>
                           <option value ="laptop">laptop</option>
                           <option value ="desktop">desktop</option>
@@ -104,7 +104,7 @@
                       <!-- select -->
                       <div class="form-group">
                         <label>Estatus</label>
-                        <select class="form-control" name="estado">
+                        <select class="form-control" name="estado" required>
                           <option disabled selected>-Seleccionar-</option>
                           <option value ="ACTIVO">ACTIVO</option>
                           <option value ="INACTIVO">INACTIVO</option>
@@ -115,7 +115,7 @@
                       <!-- select -->
                       <div class="form-group">
                         <label>Gamma</label>
-                        <select class="form-control" name="gamma">
+                        <select class="form-control" name="gamma" required>
                           <option disabled selected>-Seleccionar-</option>
                           <option value ="HOGAR">HOGAR</option>
                           <option value ="GAMING">GAMING</option>
