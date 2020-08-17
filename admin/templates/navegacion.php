@@ -35,7 +35,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="restaurar_bd.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Base de Datos
